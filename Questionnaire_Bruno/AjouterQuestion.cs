@@ -16,5 +16,17 @@ namespace Questionnaire_Bruno
         {
             InitializeComponent();
         }
+
+        private void radioBtnQuestionVraiFaux_CheckedChanged(object sender, EventArgs e)
+        {
+            pnlBonneReponse.Controls.Clear();
+            pnlBonneReponse.Controls.Add(new ReponseVraiFaux());
+        }
+
+        private void radioBtnQuestionSelecMult_CheckedChanged(object sender, EventArgs e)
+        {
+            pnlBonneReponse.Controls.Clear();
+            pnlBonneReponse.Controls.Add(new ReponseSelecMult());
+        }
     }
 }
