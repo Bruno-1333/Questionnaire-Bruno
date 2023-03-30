@@ -24,7 +24,7 @@ namespace Questionnaire_Bruno
             // recuper la liste de utilisateur 
             listUser = UserDAOFactory.CreerUserDAO("FILE").ChercherTout();
             //Afecter la list a la grille
-            dataGridView1.DataSource = listUser;
+            dataGridSupprimerUtilisateur.DataSource = listUser;
 
         }
 
@@ -32,13 +32,13 @@ namespace Questionnaire_Bruno
         private void btnSupprimer_Click_1(object sender, EventArgs e)
         {
             //Supprimer user du ficher
-            UserDAOFactory.CreerUserDAO("FILE").Supprimer(listUser[dataGridView1.SelectedCells[0].RowIndex]);
+            UserDAOFactory.CreerUserDAO("FILE").Supprimer(listUser[dataGridSupprimerUtilisateur.SelectedCells[0].RowIndex]);
 
             // Suprimer user de la list
-            listUser.RemoveAt(dataGridView1.SelectedCells[0].RowIndex);
+            listUser.RemoveAt(dataGridSupprimerUtilisateur.SelectedCells[0].RowIndex);
 
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = listUser;
+            dataGridSupprimerUtilisateur.DataSource = null;
+            dataGridSupprimerUtilisateur.DataSource = listUser;
         }
     }
 }

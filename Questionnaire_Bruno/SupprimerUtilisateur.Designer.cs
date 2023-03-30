@@ -28,25 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dataGridSupprimerUtilisateur = new DataGridView();
             btnSupprimer = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridSupprimerUtilisateur).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridSupprimerUtilisateur
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 24);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1117, 294);
-            dataGridView1.TabIndex = 0;
+            dataGridSupprimerUtilisateur.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridSupprimerUtilisateur.Location = new Point(4, 40);
+            dataGridSupprimerUtilisateur.Margin = new Padding(4, 5, 4, 5);
+            dataGridSupprimerUtilisateur.Name = "dataGridSupprimerUtilisateur";
+            dataGridSupprimerUtilisateur.RowHeadersWidth = 62;
+            dataGridSupprimerUtilisateur.RowTemplate.Height = 25;
+            dataGridSupprimerUtilisateur.Size = new Size(1596, 490);
+            dataGridSupprimerUtilisateur.TabIndex = 0;
             // 
             // btnSupprimer
             // 
-            btnSupprimer.Location = new Point(416, 343);
+            btnSupprimer.Location = new Point(594, 572);
+            btnSupprimer.Margin = new Padding(4, 5, 4, 5);
             btnSupprimer.Name = "btnSupprimer";
-            btnSupprimer.Size = new Size(266, 61);
+            btnSupprimer.Size = new Size(380, 102);
             btnSupprimer.TabIndex = 1;
             btnSupprimer.Text = "Supprimer";
             btnSupprimer.UseVisualStyleBackColor = true;
@@ -54,20 +57,21 @@
             // 
             // SupprimerUtilisateur
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btnSupprimer);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridSupprimerUtilisateur);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "SupprimerUtilisateur";
-            Size = new Size(1135, 531);
+            Size = new Size(1621, 760);
             Load += SupprimerUtilisateur_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridSupprimerUtilisateur).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dataGridSupprimerUtilisateur;
         private Button btnSupprimer;
     }
 }

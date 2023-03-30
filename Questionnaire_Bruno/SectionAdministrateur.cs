@@ -34,5 +34,35 @@ namespace Questionnaire_Bruno
             PannelPrincipale.Controls.Clear();
             PannelPrincipale.Controls.Add(new ModifierUtilisateur());
         }
+
+        private void MenuAdmAfficherUtilisateur_Click(object sender, EventArgs e)
+        {
+            PannelPrincipale.Controls.Clear();
+            PannelPrincipale.Controls.Add(new ChercherUtilisateurs());
+        }
+
+        private void MenuAdmAjouterQuestion_Click(object sender, EventArgs e)
+        {
+            PannelPrincipale.Controls.Clear();
+            PannelPrincipale.Controls.Add(new AjouterQuestion());
+        }
+
+        private void MenuAdmSupprimerQuestion_Click(object sender, EventArgs e)
+        {
+            PannelPrincipale.Controls.Clear();
+            PannelPrincipale.Controls.Add(new SupprimerQuestion());
+        }
+
+        private void MenuAdmModifierQuestion_Click(object sender, EventArgs e)
+        {
+            PannelPrincipale.Controls.Clear();
+            PannelPrincipale.Controls.Add(new ModifierQuestion());
+        }
+
+        private void MenuAdmAfficherQuestion_Click(object sender, EventArgs e)
+        {
+            PannelPrincipale.Controls.Clear();
+            PannelPrincipale.Controls.Add(new ConsulterQuestions());
+        }
     }
 }

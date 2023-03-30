@@ -30,16 +30,16 @@
         {
             groupBox1 = new GroupBox();
             groupBox3 = new GroupBox();
-            radioButton4 = new RadioButton();
-            radioButton3 = new RadioButton();
+            radioBtnReponseFaux = new RadioButton();
+            radioBtnReponseVrai = new RadioButton();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtEnonce = new TextBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
-            button1 = new Button();
-            button2 = new Button();
+            radioBtnQuestionSelecMult = new RadioButton();
+            radioBtnQuestionVraiFaux = new RadioButton();
+            BtnAjouterQuestions = new Button();
+            BtnAnnulerQuestions = new Button();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -49,7 +49,7 @@
             // 
             groupBox1.Controls.Add(groupBox3);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txtEnonce);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(groupBox2);
             groupBox1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point);
@@ -64,8 +64,8 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(radioButton4);
-            groupBox3.Controls.Add(radioButton3);
+            groupBox3.Controls.Add(radioBtnReponseFaux);
+            groupBox3.Controls.Add(radioBtnReponseVrai);
             groupBox3.Location = new Point(34, 549);
             groupBox3.Margin = new Padding(4, 5, 4, 5);
             groupBox3.Name = "groupBox3";
@@ -74,31 +74,31 @@
             groupBox3.TabIndex = 4;
             groupBox3.TabStop = false;
             // 
-            // radioButton4
+            // radioBtnReponseFaux
             // 
-            radioButton4.AutoSize = true;
-            radioButton4.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton4.Location = new Point(170, 45);
-            radioButton4.Margin = new Padding(4, 5, 4, 5);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(103, 37);
-            radioButton4.TabIndex = 1;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Faux";
-            radioButton4.UseVisualStyleBackColor = true;
+            radioBtnReponseFaux.AutoSize = true;
+            radioBtnReponseFaux.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            radioBtnReponseFaux.Location = new Point(170, 45);
+            radioBtnReponseFaux.Margin = new Padding(4, 5, 4, 5);
+            radioBtnReponseFaux.Name = "radioBtnReponseFaux";
+            radioBtnReponseFaux.Size = new Size(103, 37);
+            radioBtnReponseFaux.TabIndex = 1;
+            radioBtnReponseFaux.TabStop = true;
+            radioBtnReponseFaux.Text = "Faux";
+            radioBtnReponseFaux.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioBtnReponseVrai
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton3.Location = new Point(21, 45);
-            radioButton3.Margin = new Padding(4, 5, 4, 5);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(91, 37);
-            radioButton3.TabIndex = 0;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Vrai";
-            radioButton3.UseVisualStyleBackColor = true;
+            radioBtnReponseVrai.AutoSize = true;
+            radioBtnReponseVrai.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            radioBtnReponseVrai.Location = new Point(21, 45);
+            radioBtnReponseVrai.Margin = new Padding(4, 5, 4, 5);
+            radioBtnReponseVrai.Name = "radioBtnReponseVrai";
+            radioBtnReponseVrai.Size = new Size(91, 37);
+            radioBtnReponseVrai.TabIndex = 0;
+            radioBtnReponseVrai.TabStop = true;
+            radioBtnReponseVrai.Text = "Vrai";
+            radioBtnReponseVrai.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -111,14 +111,14 @@
             label2.TabIndex = 3;
             label2.Text = "Bonnes Réponses";
             // 
-            // textBox1
+            // txtEnonce
             // 
-            textBox1.Location = new Point(151, 274);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(1074, 232);
-            textBox1.TabIndex = 2;
+            txtEnonce.Location = new Point(151, 274);
+            txtEnonce.Margin = new Padding(4, 5, 4, 5);
+            txtEnonce.Multiline = true;
+            txtEnonce.Name = "txtEnonce";
+            txtEnonce.Size = new Size(1074, 232);
+            txtEnonce.TabIndex = 2;
             // 
             // label1
             // 
@@ -133,8 +133,8 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(radioButton2);
-            groupBox2.Controls.Add(radioButton1);
+            groupBox2.Controls.Add(radioBtnQuestionSelecMult);
+            groupBox2.Controls.Add(radioBtnQuestionVraiFaux);
             groupBox2.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Italic, GraphicsUnit.Point);
             groupBox2.Location = new Point(34, 107);
             groupBox2.Margin = new Padding(4, 5, 4, 5);
@@ -145,56 +145,56 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Choisir le type de questions";
             // 
-            // radioButton2
+            // radioBtnQuestionSelecMult
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(644, 68);
-            radioButton2.Margin = new Padding(4, 5, 4, 5);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(438, 37);
-            radioButton2.TabIndex = 1;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Questions Selections Multiples";
-            radioButton2.UseVisualStyleBackColor = true;
+            radioBtnQuestionSelecMult.AutoSize = true;
+            radioBtnQuestionSelecMult.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            radioBtnQuestionSelecMult.Location = new Point(644, 68);
+            radioBtnQuestionSelecMult.Margin = new Padding(4, 5, 4, 5);
+            radioBtnQuestionSelecMult.Name = "radioBtnQuestionSelecMult";
+            radioBtnQuestionSelecMult.Size = new Size(438, 37);
+            radioBtnQuestionSelecMult.TabIndex = 1;
+            radioBtnQuestionSelecMult.TabStop = true;
+            radioBtnQuestionSelecMult.Text = "Questions Selections Multiples";
+            radioBtnQuestionSelecMult.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioBtnQuestionVraiFaux
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(334, 68);
-            radioButton1.Margin = new Padding(4, 5, 4, 5);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(287, 37);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Question Vrai/Faux";
-            radioButton1.UseVisualStyleBackColor = true;
+            radioBtnQuestionVraiFaux.AutoSize = true;
+            radioBtnQuestionVraiFaux.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            radioBtnQuestionVraiFaux.Location = new Point(334, 68);
+            radioBtnQuestionVraiFaux.Margin = new Padding(4, 5, 4, 5);
+            radioBtnQuestionVraiFaux.Name = "radioBtnQuestionVraiFaux";
+            radioBtnQuestionVraiFaux.Size = new Size(287, 37);
+            radioBtnQuestionVraiFaux.TabIndex = 0;
+            radioBtnQuestionVraiFaux.TabStop = true;
+            radioBtnQuestionVraiFaux.Text = "Question Vrai/Faux";
+            radioBtnQuestionVraiFaux.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BtnAjouterQuestions
             // 
-            button1.Location = new Point(400, 942);
-            button1.Name = "button1";
-            button1.Size = new Size(178, 34);
-            button1.TabIndex = 1;
-            button1.Text = "Ajouter";
-            button1.UseVisualStyleBackColor = true;
+            BtnAjouterQuestions.Location = new Point(400, 942);
+            BtnAjouterQuestions.Name = "BtnAjouterQuestions";
+            BtnAjouterQuestions.Size = new Size(178, 34);
+            BtnAjouterQuestions.TabIndex = 1;
+            BtnAjouterQuestions.Text = "Ajouter";
+            BtnAjouterQuestions.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnAnnulerQuestions
             // 
-            button2.Location = new Point(742, 942);
-            button2.Name = "button2";
-            button2.Size = new Size(178, 34);
-            button2.TabIndex = 2;
-            button2.Text = "Annuler";
-            button2.UseVisualStyleBackColor = true;
+            BtnAnnulerQuestions.Location = new Point(742, 942);
+            BtnAnnulerQuestions.Name = "BtnAnnulerQuestions";
+            BtnAnnulerQuestions.Size = new Size(178, 34);
+            BtnAnnulerQuestions.TabIndex = 2;
+            BtnAnnulerQuestions.Text = "Annuler";
+            BtnAnnulerQuestions.UseVisualStyleBackColor = true;
             // 
             // AjouterQuestion
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(BtnAnnulerQuestions);
+            Controls.Add(BtnAjouterQuestions);
             Controls.Add(groupBox1);
             Margin = new Padding(4, 5, 4, 5);
             Name = "AjouterQuestion";
@@ -212,15 +212,15 @@
 
         private GroupBox groupBox1;
         private GroupBox groupBox3;
-        private RadioButton radioButton4;
-        private RadioButton radioButton3;
+        private RadioButton radioBtnReponseFaux;
+        private RadioButton radioBtnReponseVrai;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtEnonce;
         private Label label1;
         private GroupBox groupBox2;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private Button button1;
-        private Button button2;
+        private RadioButton radioBtnQuestionSelecMult;
+        private RadioButton radioBtnQuestionVraiFaux;
+        private Button BtnAjouterQuestions;
+        private Button BtnAnnulerQuestions;
     }
 }

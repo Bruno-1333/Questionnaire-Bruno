@@ -89,6 +89,7 @@
             MenuAdmAfficherUtilisateur.Name = "MenuAdmAfficherUtilisateur";
             MenuAdmAfficherUtilisateur.Size = new Size(280, 34);
             MenuAdmAfficherUtilisateur.Text = "Chercher Utilisateurs";
+            MenuAdmAfficherUtilisateur.Click += MenuAdmAfficherUtilisateur_Click;
             // 
             // gestionQuestionToolStripMenuItem
             // 
@@ -102,24 +103,28 @@
             MenuAdmAjouterQuestion.Name = "MenuAdmAjouterQuestion";
             MenuAdmAjouterQuestion.Size = new Size(274, 34);
             MenuAdmAjouterQuestion.Text = "Ajouter Question";
+            MenuAdmAjouterQuestion.Click += MenuAdmAjouterQuestion_Click;
             // 
             // MenuAdmSupprimerQuestion
             // 
             MenuAdmSupprimerQuestion.Name = "MenuAdmSupprimerQuestion";
             MenuAdmSupprimerQuestion.Size = new Size(274, 34);
             MenuAdmSupprimerQuestion.Text = "Supprimer Question";
+            MenuAdmSupprimerQuestion.Click += MenuAdmSupprimerQuestion_Click;
             // 
             // MenuAdmModifierQuestion
             // 
             MenuAdmModifierQuestion.Name = "MenuAdmModifierQuestion";
             MenuAdmModifierQuestion.Size = new Size(274, 34);
             MenuAdmModifierQuestion.Text = "Modifier Question";
+            MenuAdmModifierQuestion.Click += MenuAdmModifierQuestion_Click;
             // 
             // MenuAdmAfficherQuestion
             // 
             MenuAdmAfficherQuestion.Name = "MenuAdmAfficherQuestion";
             MenuAdmAfficherQuestion.Size = new Size(274, 34);
             MenuAdmAfficherQuestion.Text = "Consulter Questions";
+            MenuAdmAfficherQuestion.Click += MenuAdmAfficherQuestion_Click;
             // 
             // resultatToolStripMenuItem
             // 
