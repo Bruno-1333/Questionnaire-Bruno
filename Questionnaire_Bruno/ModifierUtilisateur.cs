@@ -20,8 +20,13 @@ namespace Questionnaire_Bruno
         private void btnModifierUtilisateur_Click(object sender, EventArgs e)
         {
             // crier modifier utilisateur
-            
 
+
+
+        }
+
+        private void ajouterUtilisateur1_Load(object sender, EventArgs e)
+        {
 
         }
     }
