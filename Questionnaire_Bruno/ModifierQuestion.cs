@@ -16,5 +16,10 @@ namespace Questionnaire_Bruno
         {
             InitializeComponent();
         }
+
+        private void radioBtnQuestionVraiFaux_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
