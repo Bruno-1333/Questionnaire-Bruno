@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             label9 = new Label();
-            textBox6 = new TextBox();
+            textBoxLogin = new TextBox();
             label10 = new Label();
             label11 = new Label();
-            textBox7 = new TextBox();
+            textBoxMP = new TextBox();
             label12 = new Label();
-            textBox1 = new TextBox();
+            textBoxAdrNum = new TextBox();
             textBox8 = new TextBox();
             label4 = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
+            radioButtonUser = new RadioButton();
+            radioButtonAdmin = new RadioButton();
             label5 = new Label();
-            button1 = new Button();
+            btnModifier = new Button();
             groupBox9 = new GroupBox();
             groupBox8 = new GroupBox();
-            textBox2 = new TextBox();
+            textBoxAdrRue = new TextBox();
             label6 = new Label();
-            textBox3 = new TextBox();
+            textBoxAdrVille = new TextBox();
             label7 = new Label();
-            textBox4 = new TextBox();
+            textBoxAdrProvince = new TextBox();
             label8 = new Label();
-            textBox5 = new TextBox();
+            textBoxCP = new TextBox();
             groupBox7 = new GroupBox();
-            button2 = new Button();
+            btnAnnuler = new Button();
             textNom = new TextBox();
             groupBox6 = new GroupBox();
             label1 = new Label();
@@ -60,9 +60,9 @@
             textTelephone = new TextBox();
             textPrenon = new TextBox();
             groupBox1 = new GroupBox();
+            btnChercher = new Button();
+            txtChercherLogin = new TextBox();
             label13 = new Label();
-            textBox9 = new TextBox();
-            button3 = new Button();
             groupBox9.SuspendLayout();
             groupBox8.SuspendLayout();
             groupBox7.SuspendLayout();
@@ -80,12 +80,12 @@
             label9.Text = "Le deux mot passe doit\r\netre identique";
             label9.Visible = false;
             // 
-            // textBox6
+            // textBoxLogin
             // 
-            textBox6.Location = new Point(201, 19);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(243, 21);
-            textBox6.TabIndex = 56;
+            textBoxLogin.Location = new Point(201, 19);
+            textBoxLogin.Name = "textBoxLogin";
+            textBoxLogin.Size = new Size(243, 21);
+            textBoxLogin.TabIndex = 56;
             // 
             // label10
             // 
@@ -107,12 +107,12 @@
             label11.TabIndex = 57;
             label11.Text = "Mot de Passe";
             // 
-            // textBox7
+            // textBoxMP
             // 
-            textBox7.Location = new Point(201, 46);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(243, 21);
-            textBox7.TabIndex = 58;
+            textBoxMP.Location = new Point(201, 46);
+            textBoxMP.Name = "textBoxMP";
+            textBoxMP.Size = new Size(243, 21);
+            textBoxMP.TabIndex = 58;
             // 
             // label12
             // 
@@ -124,12 +124,12 @@
             label12.TabIndex = 59;
             label12.Text = "Confirmer Mot de Passe";
             // 
-            // textBox1
+            // textBoxAdrNum
             // 
-            textBox1.Location = new Point(113, 17);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(521, 21);
-            textBox1.TabIndex = 46;
+            textBoxAdrNum.Location = new Point(113, 17);
+            textBoxAdrNum.Name = "textBoxAdrNum";
+            textBoxAdrNum.Size = new Size(521, 21);
+            textBoxAdrNum.TabIndex = 46;
             // 
             // textBox8
             // 
@@ -148,29 +148,29 @@
             label4.TabIndex = 45;
             label4.Text = "Numéro";
             // 
-            // radioButton1
+            // radioButtonUser
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(365, 20);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(94, 27);
-            radioButton1.TabIndex = 64;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Utilisateur";
-            radioButton1.UseVisualStyleBackColor = true;
+            radioButtonUser.AutoSize = true;
+            radioButtonUser.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButtonUser.Location = new Point(365, 20);
+            radioButtonUser.Name = "radioButtonUser";
+            radioButtonUser.Size = new Size(94, 27);
+            radioButtonUser.TabIndex = 64;
+            radioButtonUser.TabStop = true;
+            radioButtonUser.Text = "Utilisateur";
+            radioButtonUser.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonAdmin
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(176, 20);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(126, 27);
-            radioButton2.TabIndex = 63;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Administrateur";
-            radioButton2.UseVisualStyleBackColor = true;
+            radioButtonAdmin.AutoSize = true;
+            radioButtonAdmin.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButtonAdmin.Location = new Point(176, 20);
+            radioButtonAdmin.Name = "radioButtonAdmin";
+            radioButtonAdmin.Size = new Size(126, 27);
+            radioButtonAdmin.TabIndex = 63;
+            radioButtonAdmin.TabStop = true;
+            radioButtonAdmin.Text = "Administrateur";
+            radioButtonAdmin.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -182,23 +182,24 @@
             label5.TabIndex = 47;
             label5.Text = "Rue";
             // 
-            // button1
+            // btnModifier
             // 
-            button1.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(181, 582);
-            button1.Name = "button1";
-            button1.Size = new Size(126, 32);
-            button1.TabIndex = 48;
-            button1.Text = "Enregistrer";
-            button1.UseVisualStyleBackColor = true;
+            btnModifier.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnModifier.Location = new Point(181, 582);
+            btnModifier.Name = "btnModifier";
+            btnModifier.Size = new Size(126, 32);
+            btnModifier.TabIndex = 48;
+            btnModifier.Text = "Modifier";
+            btnModifier.UseVisualStyleBackColor = true;
+            btnModifier.Click += btnModifier_Click;
             // 
             // groupBox9
             // 
             groupBox9.Controls.Add(label9);
-            groupBox9.Controls.Add(textBox6);
+            groupBox9.Controls.Add(textBoxLogin);
             groupBox9.Controls.Add(label10);
             groupBox9.Controls.Add(label11);
-            groupBox9.Controls.Add(textBox7);
+            groupBox9.Controls.Add(textBoxMP);
             groupBox9.Controls.Add(label12);
             groupBox9.Controls.Add(textBox8);
             groupBox9.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Italic, GraphicsUnit.Point);
@@ -212,15 +213,15 @@
             // groupBox8
             // 
             groupBox8.Controls.Add(label4);
-            groupBox8.Controls.Add(textBox1);
+            groupBox8.Controls.Add(textBoxAdrNum);
             groupBox8.Controls.Add(label5);
-            groupBox8.Controls.Add(textBox2);
+            groupBox8.Controls.Add(textBoxAdrRue);
             groupBox8.Controls.Add(label6);
-            groupBox8.Controls.Add(textBox3);
+            groupBox8.Controls.Add(textBoxAdrVille);
             groupBox8.Controls.Add(label7);
-            groupBox8.Controls.Add(textBox4);
+            groupBox8.Controls.Add(textBoxAdrProvince);
             groupBox8.Controls.Add(label8);
-            groupBox8.Controls.Add(textBox5);
+            groupBox8.Controls.Add(textBoxCP);
             groupBox8.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Italic, GraphicsUnit.Point);
             groupBox8.Location = new Point(5, 273);
             groupBox8.Name = "groupBox8";
@@ -229,12 +230,12 @@
             groupBox8.TabStop = false;
             groupBox8.Text = "Adresse";
             // 
-            // textBox2
+            // textBoxAdrRue
             // 
-            textBox2.Location = new Point(113, 46);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(521, 21);
-            textBox2.TabIndex = 48;
+            textBoxAdrRue.Location = new Point(113, 46);
+            textBoxAdrRue.Name = "textBoxAdrRue";
+            textBoxAdrRue.Size = new Size(521, 21);
+            textBoxAdrRue.TabIndex = 48;
             // 
             // label6
             // 
@@ -246,12 +247,12 @@
             label6.TabIndex = 49;
             label6.Text = "Ville";
             // 
-            // textBox3
+            // textBoxAdrVille
             // 
-            textBox3.Location = new Point(113, 75);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(521, 21);
-            textBox3.TabIndex = 50;
+            textBoxAdrVille.Location = new Point(113, 75);
+            textBoxAdrVille.Name = "textBoxAdrVille";
+            textBoxAdrVille.Size = new Size(521, 21);
+            textBoxAdrVille.TabIndex = 50;
             // 
             // label7
             // 
@@ -263,12 +264,12 @@
             label7.TabIndex = 51;
             label7.Text = "Province";
             // 
-            // textBox4
+            // textBoxAdrProvince
             // 
-            textBox4.Location = new Point(113, 104);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(521, 21);
-            textBox4.TabIndex = 52;
+            textBoxAdrProvince.Location = new Point(113, 104);
+            textBoxAdrProvince.Name = "textBoxAdrProvince";
+            textBoxAdrProvince.Size = new Size(521, 21);
+            textBoxAdrProvince.TabIndex = 52;
             // 
             // label8
             // 
@@ -280,17 +281,17 @@
             label8.TabIndex = 53;
             label8.Text = "Code Postal";
             // 
-            // textBox5
+            // textBoxCP
             // 
-            textBox5.Location = new Point(113, 133);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(521, 21);
-            textBox5.TabIndex = 54;
+            textBoxCP.Location = new Point(113, 133);
+            textBoxCP.Name = "textBoxCP";
+            textBoxCP.Size = new Size(521, 21);
+            textBoxCP.TabIndex = 54;
             // 
             // groupBox7
             // 
-            groupBox7.Controls.Add(radioButton1);
-            groupBox7.Controls.Add(radioButton2);
+            groupBox7.Controls.Add(radioButtonUser);
+            groupBox7.Controls.Add(radioButtonAdmin);
             groupBox7.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Italic, GraphicsUnit.Point);
             groupBox7.Location = new Point(5, 201);
             groupBox7.Name = "groupBox7";
@@ -299,15 +300,16 @@
             groupBox7.TabStop = false;
             groupBox7.Text = "Categone";
             // 
-            // button2
+            // btnAnnuler
             // 
-            button2.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(370, 582);
-            button2.Name = "button2";
-            button2.Size = new Size(126, 32);
-            button2.TabIndex = 49;
-            button2.Text = "Annuler";
-            button2.UseVisualStyleBackColor = true;
+            btnAnnuler.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAnnuler.Location = new Point(370, 582);
+            btnAnnuler.Name = "btnAnnuler";
+            btnAnnuler.Size = new Size(126, 32);
+            btnAnnuler.TabIndex = 49;
+            btnAnnuler.Text = "Annuler";
+            btnAnnuler.UseVisualStyleBackColor = true;
+            btnAnnuler.Click += btnAnnuler_Click;
             // 
             // textNom
             // 
@@ -379,14 +381,14 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(groupBox6);
-            groupBox1.Controls.Add(button3);
-            groupBox1.Controls.Add(textBox9);
+            groupBox1.Controls.Add(btnChercher);
+            groupBox1.Controls.Add(txtChercherLogin);
             groupBox1.Controls.Add(label13);
             groupBox1.Controls.Add(groupBox8);
             groupBox1.Controls.Add(groupBox7);
             groupBox1.Controls.Add(groupBox9);
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(btnModifier);
+            groupBox1.Controls.Add(btnAnnuler);
             groupBox1.Dock = DockStyle.Fill;
             groupBox1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point);
             groupBox1.Location = new Point(0, 0);
@@ -394,7 +396,26 @@
             groupBox1.Size = new Size(715, 655);
             groupBox1.TabIndex = 53;
             groupBox1.TabStop = false;
-            groupBox1.Text = "MODIFICATION D'UN UTILISATEUR";
+            groupBox1.Text = "Modifier";
+            // 
+            // btnChercher
+            // 
+            btnChercher.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnChercher.Location = new Point(413, 51);
+            btnChercher.Name = "btnChercher";
+            btnChercher.Size = new Size(126, 26);
+            btnChercher.TabIndex = 58;
+            btnChercher.Text = "Chercher";
+            btnChercher.UseVisualStyleBackColor = true;
+            btnChercher.Click += btnChercher_Click;
+            // 
+            // txtChercherLogin
+            // 
+            txtChercherLogin.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            txtChercherLogin.Location = new Point(118, 56);
+            txtChercherLogin.Name = "txtChercherLogin";
+            txtChercherLogin.Size = new Size(243, 21);
+            txtChercherLogin.TabIndex = 57;
             // 
             // label13
             // 
@@ -405,24 +426,6 @@
             label13.Size = new Size(49, 23);
             label13.TabIndex = 50;
             label13.Text = "Login";
-            // 
-            // textBox9
-            // 
-            textBox9.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            textBox9.Location = new Point(118, 56);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(243, 21);
-            textBox9.TabIndex = 57;
-            // 
-            // button3
-            // 
-            button3.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(413, 51);
-            button3.Name = "button3";
-            button3.Size = new Size(126, 26);
-            button3.TabIndex = 58;
-            button3.Text = "Chercher";
-            button3.UseVisualStyleBackColor = true;
             // 
             // ModifierUtilisateur
             // 
@@ -447,29 +450,29 @@
         #endregion
 
         private Label label9;
-        private TextBox textBox6;
+        private TextBox textBoxLogin;
         private Label label10;
         private Label label11;
-        private TextBox textBox7;
+        private TextBox textBoxMP;
         private Label label12;
-        private TextBox textBox1;
+        private TextBox textBoxAdrNum;
         private TextBox textBox8;
         private Label label4;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton radioButtonUser;
+        private RadioButton radioButtonAdmin;
         private Label label5;
-        private Button button1;
+        private Button btnModifier;
         private GroupBox groupBox9;
         private GroupBox groupBox8;
-        private TextBox textBox2;
+        private TextBox textBoxAdrRue;
         private Label label6;
-        private TextBox textBox3;
+        private TextBox textBoxAdrVille;
         private Label label7;
-        private TextBox textBox4;
+        private TextBox textBoxAdrProvince;
         private Label label8;
-        private TextBox textBox5;
+        private TextBox textBoxCP;
         private GroupBox groupBox7;
-        private Button button2;
+        private Button btnAnnuler;
         private TextBox textNom;
         private GroupBox groupBox6;
         private Label label1;
@@ -478,8 +481,8 @@
         private TextBox textTelephone;
         private TextBox textPrenon;
         private GroupBox groupBox1;
-        private Button button3;
-        private TextBox textBox9;
+        private Button btnChercher;
+        private TextBox txtChercherLogin;
         private Label label13;
     }
 }

@@ -65,6 +65,11 @@ namespace Questionnaire_Bruno
             textLogin.Text = string.Empty;
             textMotPasse.Text = string.Empty;
             textConfirmerMotPasse.Text = string.Empty;
+            //if(this.ParentForm.Name == "Form2")
+            //{
+            //    this.ParentForm.Close();
+            //}
+
 
         }
     }

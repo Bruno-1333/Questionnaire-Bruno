@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questionnaire_Bruno.DAOs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Questionnaire_Bruno
 {
@@ -17,9 +19,11 @@ namespace Questionnaire_Bruno
             InitializeComponent();
         }
 
-        private void radioBtnQuestionVraiFaux_CheckedChanged(object sender, EventArgs e)
+        private void btnChercher_Click(object sender, EventArgs e)
         {
-            
+
+
+
         }
     }
 }

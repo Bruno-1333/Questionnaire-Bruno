@@ -32,8 +32,8 @@
             groupBox1 = new GroupBox();
             dataGridConsulterQuestions = new DataGridView();
             groupBox2 = new GroupBox();
-            radioBtnQuestionSelectMult = new RadioButton();
-            radioBtnQuestionFraiFaux = new RadioButton();
+            checkVraiFaux = new CheckBox();
+            checkSelecMult = new CheckBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridConsulterQuestions).BeginInit();
             groupBox2.SuspendLayout();
@@ -43,7 +43,7 @@
             // 
             btnConsulter.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnConsulter.Location = new Point(404, 136);
-            btnConsulter.Margin = new Padding(2, 2, 2, 2);
+            btnConsulter.Margin = new Padding(2);
             btnConsulter.Name = "btnConsulter";
             btnConsulter.Size = new Size(125, 30);
             btnConsulter.TabIndex = 7;
@@ -68,7 +68,7 @@
             // 
             dataGridConsulterQuestions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridConsulterQuestions.Location = new Point(18, 176);
-            dataGridConsulterQuestions.Margin = new Padding(2, 2, 2, 2);
+            dataGridConsulterQuestions.Margin = new Padding(2);
             dataGridConsulterQuestions.Name = "dataGridConsulterQuestions";
             dataGridConsulterQuestions.RowHeadersWidth = 62;
             dataGridConsulterQuestions.RowTemplate.Height = 33;
@@ -77,8 +77,8 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(radioBtnQuestionSelectMult);
-            groupBox2.Controls.Add(radioBtnQuestionFraiFaux);
+            groupBox2.Controls.Add(checkSelecMult);
+            groupBox2.Controls.Add(checkVraiFaux);
             groupBox2.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Italic, GraphicsUnit.Point);
             groupBox2.Location = new Point(18, 43);
             groupBox2.Name = "groupBox2";
@@ -87,36 +87,32 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Choisir le type de questions";
             // 
-            // radioBtnQuestionSelectMult
+            // checkVraiFaux
             // 
-            radioBtnQuestionSelectMult.AutoSize = true;
-            radioBtnQuestionSelectMult.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioBtnQuestionSelectMult.Location = new Point(452, 43);
-            radioBtnQuestionSelectMult.Name = "radioBtnQuestionSelectMult";
-            radioBtnQuestionSelectMult.Size = new Size(287, 26);
-            radioBtnQuestionSelectMult.TabIndex = 1;
-            radioBtnQuestionSelectMult.TabStop = true;
-            radioBtnQuestionSelectMult.Text = "Questions Selections Multiples";
-            radioBtnQuestionSelectMult.UseVisualStyleBackColor = true;
+            checkVraiFaux.AutoSize = true;
+            checkVraiFaux.Location = new Point(197, 43);
+            checkVraiFaux.Name = "checkVraiFaux";
+            checkVraiFaux.Size = new Size(177, 22);
+            checkVraiFaux.TabIndex = 0;
+            checkVraiFaux.Text = "Question Vrai/Faux";
+            checkVraiFaux.UseVisualStyleBackColor = true;
             // 
-            // radioBtnQuestionFraiFaux
+            // checkSelecMult
             // 
-            radioBtnQuestionFraiFaux.AutoSize = true;
-            radioBtnQuestionFraiFaux.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            radioBtnQuestionFraiFaux.Location = new Point(235, 43);
-            radioBtnQuestionFraiFaux.Name = "radioBtnQuestionFraiFaux";
-            radioBtnQuestionFraiFaux.Size = new Size(187, 26);
-            radioBtnQuestionFraiFaux.TabIndex = 0;
-            radioBtnQuestionFraiFaux.TabStop = true;
-            radioBtnQuestionFraiFaux.Text = "Question Vrai/Faux";
-            radioBtnQuestionFraiFaux.UseVisualStyleBackColor = true;
+            checkSelecMult.AutoSize = true;
+            checkSelecMult.Location = new Point(496, 43);
+            checkSelecMult.Name = "checkSelecMult";
+            checkSelecMult.Size = new Size(243, 22);
+            checkSelecMult.TabIndex = 1;
+            checkSelecMult.Text = "Question Selection Multiple";
+            checkSelecMult.UseVisualStyleBackColor = true;
             // 
             // ConsulterQuestions
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(groupBox1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "ConsulterQuestions";
             Size = new Size(960, 577);
             groupBox1.ResumeLayout(false);
@@ -130,8 +126,8 @@
         private Button btnConsulter;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private RadioButton radioBtnQuestionSelectMult;
-        private RadioButton radioBtnQuestionFraiFaux;
         private DataGridView dataGridConsulterQuestions;
+        private CheckBox checkSelecMult;
+        private CheckBox checkVraiFaux;
     }
 }

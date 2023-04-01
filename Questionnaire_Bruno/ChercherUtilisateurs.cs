@@ -16,5 +16,9 @@ namespace Questionnaire_Bruno
         {
             InitializeComponent();
         }
+
+        private void btnChercher_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

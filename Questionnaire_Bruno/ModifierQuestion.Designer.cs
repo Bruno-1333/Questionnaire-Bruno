@@ -31,6 +31,7 @@
             btnAnnuler = new Button();
             btnModifier = new Button();
             groupBox1 = new GroupBox();
+            btnChercher = new Button();
             txtIdModiierQuestion = new TextBox();
             label3 = new Label();
             label2 = new Label();
@@ -39,7 +40,6 @@
             groupBox2 = new GroupBox();
             radioBtnQuestionSelectMult = new RadioButton();
             radioBtnQuestionVraiFaux = new RadioButton();
-            btnChercher = new Button();
             pnlReponses = new Panel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -49,7 +49,7 @@
             // 
             btnAnnuler.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnAnnuler.Location = new Point(586, 571);
-            btnAnnuler.Margin = new Padding(2, 2, 2, 2);
+            btnAnnuler.Margin = new Padding(2);
             btnAnnuler.Name = "btnAnnuler";
             btnAnnuler.Size = new Size(125, 26);
             btnAnnuler.TabIndex = 5;
@@ -60,7 +60,7 @@
             // 
             btnModifier.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnModifier.Location = new Point(346, 571);
-            btnModifier.Margin = new Padding(2, 2, 2, 2);
+            btnModifier.Margin = new Padding(2);
             btnModifier.Name = "btnModifier";
             btnModifier.Size = new Size(125, 26);
             btnModifier.TabIndex = 4;
@@ -84,6 +84,18 @@
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Modifier Question";
+            // 
+            // btnChercher
+            // 
+            btnChercher.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnChercher.Location = new Point(503, 62);
+            btnChercher.Margin = new Padding(2);
+            btnChercher.Name = "btnChercher";
+            btnChercher.Size = new Size(125, 26);
+            btnChercher.TabIndex = 7;
+            btnChercher.Text = "Modifier";
+            btnChercher.UseVisualStyleBackColor = true;
+            btnChercher.Click += btnChercher_Click;
             // 
             // txtIdModiierQuestion
             // 
@@ -166,18 +178,6 @@
             radioBtnQuestionVraiFaux.TabStop = true;
             radioBtnQuestionVraiFaux.Text = "Question Vrai/Faux";
             radioBtnQuestionVraiFaux.UseVisualStyleBackColor = true;
-            radioBtnQuestionVraiFaux.CheckedChanged += radioBtnQuestionVraiFaux_CheckedChanged;
-            // 
-            // btnChercher
-            // 
-            btnChercher.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnChercher.Location = new Point(503, 62);
-            btnChercher.Margin = new Padding(2);
-            btnChercher.Name = "btnChercher";
-            btnChercher.Size = new Size(125, 26);
-            btnChercher.TabIndex = 7;
-            btnChercher.Text = "Modifier";
-            btnChercher.UseVisualStyleBackColor = true;
             // 
             // pnlReponses
             // 
@@ -193,7 +193,7 @@
             Controls.Add(btnAnnuler);
             Controls.Add(btnModifier);
             Controls.Add(groupBox1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "ModifierQuestion";
             Size = new Size(1074, 612);
             groupBox1.ResumeLayout(false);

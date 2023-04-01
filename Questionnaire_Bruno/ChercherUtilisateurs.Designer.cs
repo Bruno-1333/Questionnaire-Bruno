@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            dataGridChercherUtilisateur = new DataGridView();
             groupBox2 = new GroupBox();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox4 = new CheckBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
+            btnChercher = new Button();
+            txtTelephone = new TextBox();
+            txtVille = new TextBox();
+            txtProvince = new TextBox();
+            txtCodePostal = new TextBox();
+            checTelephone = new CheckBox();
+            checkVille = new CheckBox();
+            checkProvince = new CheckBox();
+            checkCodePostal = new CheckBox();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridChercherUtilisateur).BeginInit();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(dataGridView1);
+            groupBox1.Controls.Add(dataGridChercherUtilisateur);
             groupBox1.Controls.Add(groupBox2);
             groupBox1.Dock = DockStyle.Fill;
             groupBox1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point);
@@ -58,17 +58,26 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "CHERCHER DES UTILISATEURS";
             // 
+            // dataGridChercherUtilisateur
+            // 
+            dataGridChercherUtilisateur.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridChercherUtilisateur.Location = new Point(22, 295);
+            dataGridChercherUtilisateur.Name = "dataGridChercherUtilisateur";
+            dataGridChercherUtilisateur.RowTemplate.Height = 25;
+            dataGridChercherUtilisateur.Size = new Size(995, 278);
+            dataGridChercherUtilisateur.TabIndex = 1;
+            // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(button1);
-            groupBox2.Controls.Add(textBox4);
-            groupBox2.Controls.Add(textBox3);
-            groupBox2.Controls.Add(textBox2);
-            groupBox2.Controls.Add(textBox1);
-            groupBox2.Controls.Add(checkBox4);
-            groupBox2.Controls.Add(checkBox3);
-            groupBox2.Controls.Add(checkBox2);
-            groupBox2.Controls.Add(checkBox1);
+            groupBox2.Controls.Add(btnChercher);
+            groupBox2.Controls.Add(txtTelephone);
+            groupBox2.Controls.Add(txtVille);
+            groupBox2.Controls.Add(txtProvince);
+            groupBox2.Controls.Add(txtCodePostal);
+            groupBox2.Controls.Add(checTelephone);
+            groupBox2.Controls.Add(checkVille);
+            groupBox2.Controls.Add(checkProvince);
+            groupBox2.Controls.Add(checkCodePostal);
             groupBox2.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Italic, GraphicsUnit.Point);
             groupBox2.Location = new Point(21, 58);
             groupBox2.Name = "groupBox2";
@@ -77,92 +86,84 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Choisir un/des critères de recherche";
             // 
-            // checkBox1
+            // btnChercher
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(38, 49);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(123, 22);
-            checkBox1.TabIndex = 0;
-            checkBox1.Text = "Code Postal";
-            checkBox1.UseVisualStyleBackColor = true;
+            btnChercher.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnChercher.Location = new Point(377, 177);
+            btnChercher.Name = "btnChercher";
+            btnChercher.Size = new Size(211, 32);
+            btnChercher.TabIndex = 8;
+            btnChercher.Text = "Chercher";
+            btnChercher.UseVisualStyleBackColor = true;
+            btnChercher.Click += btnChercher_Click;
             // 
-            // checkBox2
+            // txtTelephone
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(38, 134);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(98, 22);
-            checkBox2.TabIndex = 1;
-            checkBox2.Text = "Province";
-            checkBox2.UseVisualStyleBackColor = true;
+            txtTelephone.Location = new Point(662, 130);
+            txtTelephone.Name = "txtTelephone";
+            txtTelephone.Size = new Size(235, 26);
+            txtTelephone.TabIndex = 7;
             // 
-            // checkBox3
+            // txtVille
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(519, 49);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(60, 22);
-            checkBox3.TabIndex = 2;
-            checkBox3.Text = "Ville";
-            checkBox3.UseVisualStyleBackColor = true;
+            txtVille.Location = new Point(662, 45);
+            txtVille.Name = "txtVille";
+            txtVille.Size = new Size(235, 26);
+            txtVille.TabIndex = 6;
             // 
-            // checkBox4
+            // txtProvince
             // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(519, 134);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(111, 22);
-            checkBox4.TabIndex = 3;
-            checkBox4.Text = "Téléphone";
-            checkBox4.UseVisualStyleBackColor = true;
+            txtProvince.Location = new Point(170, 130);
+            txtProvince.Name = "txtProvince";
+            txtProvince.Size = new Size(235, 26);
+            txtProvince.TabIndex = 5;
             // 
-            // textBox1
+            // txtCodePostal
             // 
-            textBox1.Location = new Point(170, 45);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(235, 26);
-            textBox1.TabIndex = 4;
+            txtCodePostal.Location = new Point(170, 45);
+            txtCodePostal.Name = "txtCodePostal";
+            txtCodePostal.Size = new Size(235, 26);
+            txtCodePostal.TabIndex = 4;
             // 
-            // textBox2
+            // checTelephone
             // 
-            textBox2.Location = new Point(170, 130);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(235, 26);
-            textBox2.TabIndex = 5;
+            checTelephone.AutoSize = true;
+            checTelephone.Location = new Point(519, 134);
+            checTelephone.Name = "checTelephone";
+            checTelephone.Size = new Size(111, 22);
+            checTelephone.TabIndex = 3;
+            checTelephone.Text = "Téléphone";
+            checTelephone.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // checkVille
             // 
-            textBox3.Location = new Point(662, 45);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(235, 26);
-            textBox3.TabIndex = 6;
+            checkVille.AutoSize = true;
+            checkVille.Location = new Point(519, 49);
+            checkVille.Name = "checkVille";
+            checkVille.Size = new Size(60, 22);
+            checkVille.TabIndex = 2;
+            checkVille.Text = "Ville";
+            checkVille.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // checkProvince
             // 
-            textBox4.Location = new Point(662, 130);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(235, 26);
-            textBox4.TabIndex = 7;
+            checkProvince.AutoSize = true;
+            checkProvince.Location = new Point(38, 134);
+            checkProvince.Name = "checkProvince";
+            checkProvince.Size = new Size(98, 22);
+            checkProvince.TabIndex = 1;
+            checkProvince.Text = "Province";
+            checkProvince.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // checkCodePostal
             // 
-            button1.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(377, 177);
-            button1.Name = "button1";
-            button1.Size = new Size(211, 32);
-            button1.TabIndex = 8;
-            button1.Text = "Chercher";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(22, 295);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(995, 278);
-            dataGridView1.TabIndex = 1;
+            checkCodePostal.AutoSize = true;
+            checkCodePostal.Location = new Point(38, 49);
+            checkCodePostal.Name = "checkCodePostal";
+            checkCodePostal.Size = new Size(123, 22);
+            checkCodePostal.TabIndex = 0;
+            checkCodePostal.Text = "Code Postal";
+            checkCodePostal.UseVisualStyleBackColor = true;
             // 
             // ChercherUtilisateurs
             // 
@@ -172,25 +173,25 @@
             Name = "ChercherUtilisateurs";
             Size = new Size(1072, 633);
             groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridChercherUtilisateur).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private GroupBox groupBox1;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridChercherUtilisateur;
         private GroupBox groupBox2;
-        private Button button1;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private CheckBox checkBox4;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
+        private Button btnChercher;
+        private TextBox txtTelephone;
+        private TextBox txtVille;
+        private TextBox txtProvince;
+        private TextBox txtCodePostal;
+        private CheckBox checTelephone;
+        private CheckBox checkVille;
+        private CheckBox checkProvince;
+        private CheckBox checkCodePostal;
     }
 }
