@@ -116,7 +116,7 @@ namespace Questionnaire_Bruno
                     var questionDAO = QuestionDAOFactory.CreerQuestionDAO("FILE");
                     questionDAO.Ajouter(question);
                     MessageBox.Show("Question ajouté avec succès");
-                    this.BtnAnnuler_Click(sender, e);
+                    this.btnAnnulerQuestions_Click(sender, e);
                 }
                 else
                 {
