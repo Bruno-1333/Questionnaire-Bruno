@@ -134,39 +134,39 @@ namespace Questionnaire_Bruno
             }
             else if (radioBtnQuestionSelectMult.Checked)
             {
-                ReponseSelecMult reponseSM = pnlReponses.Controls[0] as ReponseSelecMult;
+                ReponseSelecMult reponseSelecMult = pnlReponses.Controls[0] as ReponseSelecMult;
                 List<string> reponses = new List<string>();
                 List<string> propositions = new List<string>();
-                if (!string.IsNullOrEmpty(reponseSM.ReponseSelecMult1))
+                if (!string.IsNullOrEmpty(reponseSelecMult.ReponseSelecMult1))
                 {
-                    propositions.Add(reponseSM.ReponseSelecMult1);
-                    if (reponseSM.checkReponseSelecMult1)
+                    propositions.Add(reponseSelecMult.ReponseSelecMult1);
+                    if (reponseSelecMult.checkReponseSelecMult1)
                     {
-                        reponses.Add(reponseSM.ReponseSelecMult1);
+                        reponses.Add(reponseSelecMult.ReponseSelecMult1);
                     }
                 }
-                if (!string.IsNullOrEmpty(reponseSM.ReponseSelecMult2))
+                if (!string.IsNullOrEmpty(reponseSelecMult.ReponseSelecMult2))
                 {
-                    propositions.Add(reponseSM.ReponseSelecMult2);
-                    if (reponseSM.checkReponseSelecMult2)
+                    propositions.Add(reponseSelecMult.ReponseSelecMult2);
+                    if (reponseSelecMult.checkReponseSelecMult2)
                     {
-                        reponses.Add(reponseSM.ReponseSelecMult2);
+                        reponses.Add(reponseSelecMult.ReponseSelecMult2);
                     }
                 }
-                if (!string.IsNullOrEmpty(reponseSM.ReponseSelecMult3))
+                if (!string.IsNullOrEmpty(reponseSelecMult.ReponseSelecMult3))
                 {
-                    propositions.Add(reponseSM.ReponseSelecMult3);
-                    if (reponseSM.checkReponseSelecMult3)
+                    propositions.Add(reponseSelecMult.ReponseSelecMult3);
+                    if (reponseSelecMult.checkReponseSelecMult3)
                     {
-                        reponses.Add(reponseSM.ReponseSelecMult3);
+                        reponses.Add(reponseSelecMult.ReponseSelecMult3);
                     }
                 }
-                if (!string.IsNullOrEmpty(reponseSM.ReponseSelecMult4))
+                if (!string.IsNullOrEmpty(reponseSelecMult.ReponseSelecMult4))
                 {
-                    propositions.Add(reponseSM.ReponseSelecMult4);
-                    if (reponseSM.checkReponseSelecMult4)
+                    propositions.Add(reponseSelecMult.ReponseSelecMult4);
+                    if (reponseSelecMult.checkReponseSelecMult4)
                     {
-                        reponses.Add(reponseSM.ReponseSelecMult4);
+                        reponses.Add(reponseSelecMult.ReponseSelecMult4);
                     }
                 }
                 if (propositions.Count > 0 && reponses.Count > 0)
@@ -188,6 +188,76 @@ namespace Questionnaire_Bruno
                 MessageBox.Show("Vous devez choisir le type de question");
             }
         }
+
+        //private void btnChercher_Click(object sender, EventArgs e)
+        //{
+        //    // Verifica se o ID digitado é válido
+        //    if (!int.TryParse(txtIdModiierQuestion.Text, out int id))
+        //    {
+        //        MessageBox.Show("Veuillez entrer un ID de question valide");
+        //        return;
+        //    }
+
+        //    // Procura a questão pelo ID
+        //    Question question = QuestionDAOFactory.CreerQuestionDAO("FILE").ChercherParId(id);
+
+        //    // Se não encontrar a questão, exibe uma mensagem
+        //    if (question == null)
+        //    {
+        //        MessageBox.Show("Aucune question trouvée avec ce ID");
+        //        return;
+        //    }
+
+        //    // Atualiza o enunciado da questão
+        //    txtEnonce.Text = question.Enonce;
+
+        //    // Se a questão for de múltipla escolha
+        //    if (question.Type == false)
+        //    {
+        //        radioBtnQuestionSelectMult.Checked = true;
+        //        pnlReponses.Controls.Clear();
+        //        ReponseSelecMult reponseSelecMult = new ReponseSelecMult();
+        //        pnlReponses.Controls.Add(reponseSelecMult);
+
+        //        // Define as opções de resposta
+        //        reponseSelecMult.ReponseSelecMult1 = question.ChoixSelcMult[0];
+        //        reponseSelecMult.ReponseSelecMult2 = question.ChoixSelcMult[1];
+        //        reponseSelecMult.ReponseSelecMult3 = question.ChoixSelcMult[2];
+        //        reponseSelecMult.ReponseSelecMult4 = question.ChoixSelcMult[3];
+
+        //        // Define as respostas corretas
+        //        if (question.ReponseSelcMult.Contains(reponseSelecMult.ReponseSelecMult1))
+        //        {
+        //            reponseSelecMult.checkReponseSelecMult1 = true;
+        //        }
+        //        if (question.ReponseSelcMult.Contains(reponseSelecMult.ReponseSelecMult2))
+        //        {
+        //            reponseSelecMult.checkReponseSelecMult2 = true;
+        //        }
+        //        if (question.ReponseSelcMult.Contains(reponseSelecMult.ReponseSelecMult3))
+        //        {
+        //            reponseSelecMult.checkReponseSelecMult3 = true;
+        //        }
+        //        if (question.ReponseSelcMult.Contains(reponseSelecMult.ReponseSelecMult4))
+        //        {
+        //            reponseSelecMult.checkReponseSelecMult4 = true;
+        //        }
+        //    }
+        //    // Se a questão for verdadeiro ou falso
+        //    else
+        //    {
+        //        radioBtnQuestionVraiFaux.Checked = true;
+        //        pnlReponses.Controls.Clear();
+        //        ReponseVraiFaux reponseVraiFaux = new ReponseVraiFaux();
+        //        pnlReponses.Controls.Add(reponseVraiFaux);
+
+        //        // Define a resposta correta
+        //        reponseVraiFaux.VraiChecked = question.ReponseVraiFaux;
+        //    }
+        //}
+
+
+
 
     }
 }
