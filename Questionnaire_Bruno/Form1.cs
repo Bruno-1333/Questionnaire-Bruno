@@ -25,12 +25,12 @@ namespace Questionnaire_Bruno
             bool type = (radioButtonUser.Checked == true) ? false : true;
 
             var userDAO = UserDAOFactory.CreerUserDAO("FILE");
-            var user = userDAO.ChercherParLoginMPType(login,mp,type);
+            var user = userDAO.ChercherParLoginMPType(login, mp, type);
 
             if (user != null)
             {
                 new SectionAdministrateur().Show();
-                MessageBox.Show ("Utilizateur trouvé ;-)");
+                MessageBox.Show("Utilizateur trouvé ;-)");
             }
             else
             {

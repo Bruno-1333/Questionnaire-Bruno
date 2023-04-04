@@ -1,8 +1,4 @@
-﻿1;-)1+1=2;-)True;-)True;-);-)
-2;-)2+2=4;-)True;-)True;-);-)
-3;-)2+2=4;-)True;-)True;-);-)
-4;-)2+2=4;-)True;-)True;-);-)
-5;-)2+2=4;-)True;-)True;-);-)
-6;-)Capitale;-)False;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
-7;-)10+10=20;-)True;-)True;-);-)
-8;-)10-10=20;-)True;-)False;-);-)
+1;-)1+1=30;-)True;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
+2;-)Capital;-)False;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
+3;-)GJGJHGJH;-)True;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
+4;-)KHKJKJHKHHKJHKJH;-)False;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]

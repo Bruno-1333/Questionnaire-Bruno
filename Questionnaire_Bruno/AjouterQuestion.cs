@@ -44,7 +44,7 @@ namespace Questionnaire_Bruno
             string enonce = txtEnonce.Text;
             if (string.IsNullOrEmpty(enonce))
             {
-                MessageBox.Show("Vous devez entrer un énoncé pour la question");
+                MessageBox.Show("Entrer un énonce pour la question");
                 return;
             }
             if (radioBtnQuestionVraiFaux.Checked)
@@ -75,7 +75,7 @@ namespace Questionnaire_Bruno
                 }
                 else
                 {
-                    MessageBox.Show("Vous devez choisir la bonne réponse");
+                    MessageBox.Show("Choisir la bonne réponse");
                 }
             }
 
@@ -126,17 +126,17 @@ namespace Questionnaire_Bruno
 
                     var questionDAO = QuestionDAOFactory.CreerQuestionDAO("FILE");
                     questionDAO.AjouterQuestion(question);
-                    MessageBox.Show("Question ajouté avec succès");
+                    MessageBox.Show("Ajouté avec succès");
                     this.BtnAnnulerQuestions_Click(sender, e);
                 }
                 else
                 {
-                    MessageBox.Show("Vous devez entrer au moins une proposition et une bonne réponse");
+                    MessageBox.Show("Entrer avec une proposition et une bonne réponse");
                 }
             }
             else
             {
-                MessageBox.Show("Vous devez choisir le type de question");
+                MessageBox.Show("Choisir le type de question");
             }
 
         }

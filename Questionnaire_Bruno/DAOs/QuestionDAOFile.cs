@@ -14,11 +14,9 @@ namespace Questionnaire_Bruno.DAOs
         {
             question.Id = GenerateUniqueId();
 
-            if(ChercherParId(question.Id)== null)
-            {
                 string contenu = question.ToString() + "\n";
                 File.AppendAllText(path, contenu);
-            }
+            
         }
 
         public Question ChercherParId(int id)
@@ -73,7 +71,7 @@ namespace Questionnaire_Bruno.DAOs
             //Remplir le fichier
             foreach (Question q in listQuestions)
             {
-                AjouterQuestion(question);
+                AjouterQuestion(q);
             }
         }
         private int GenerateUniqueId()

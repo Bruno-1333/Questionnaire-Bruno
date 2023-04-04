@@ -74,6 +74,7 @@
             btnSupprimerQuestion.TabIndex = 2;
             btnSupprimerQuestion.Text = "Supprimer";
             btnSupprimerQuestion.UseVisualStyleBackColor = true;
+            btnSupprimerQuestion.Click += btnSupprimerQuestion_Click;
             // 
             // txtIdSupprimerQuestion
             // 

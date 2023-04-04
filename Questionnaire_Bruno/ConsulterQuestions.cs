@@ -30,8 +30,9 @@ namespace Questionnaire_Bruno
             return list3;
         }
 
-        private void ModifierQuestion_Load(object sender, EventArgs e)
+        private void btnConsulter_Click(object sender, EventArgs e)
         {
+            
             List<Question> questions = QuestionDAOFactory.CreerQuestionDAO("FILE").ListerQuestions();
             List<Question> listFiltreQuestion = new List<Question>();
             foreach (Question question in questions)
@@ -40,7 +41,7 @@ namespace Questionnaire_Bruno
                 {
                     listFiltreQuestion.Add(question);
                 }
-                else if (checkSelecMult.Checked && question.Type)
+                else if (checkSelecMult.Checked && !question.Type)
                 {
                     listFiltreQuestion.Add(question);
                 }
@@ -51,7 +52,7 @@ namespace Questionnaire_Bruno
             }
             dataGridConsulterQuestions.DataSource = null;
             dataGridConsulterQuestions.DataSource = listFiltreQuestion;
-        }
 
+        }
     }
 }

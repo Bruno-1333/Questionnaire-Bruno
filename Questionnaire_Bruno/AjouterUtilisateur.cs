@@ -23,7 +23,7 @@ namespace Questionnaire_Bruno
             string nom = textNom.Text; // recuperer les valeurs des champs
             string premon = textPrenon.Text;
             string telephone = textTelephone.Text;
-            bool type = (radioButtonAdm.Checked == true) ? false : true; // recuperer le type d'utilisateur
+            bool type = (radioButtonUser.Checked == true) ? false : true; // recuperer le type d'utilisateur
             int adrNum = int.Parse(textNumero.Text);
             string adrRue = textRue.Text;
             string adrVille = textVille.Text;
