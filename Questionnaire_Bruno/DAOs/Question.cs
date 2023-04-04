@@ -15,7 +15,6 @@ namespace Questionnaire_Bruno.DAOs
         public bool ReponseVraiFaux { get; set; }
         public List<string> ChoixSelcMult { get; set; }
         public List<string> ReponseSelcMult { get; set; }
-        public string DisplayType => Type ? "Vrai/Faux" : "Selection Multiple"; //PL
         public string ChoixDisplay => Type ? "" : string.Join(", ", ChoixSelcMult); //Pl
         public string ReponseDisplay => Type ? (ReponseVraiFaux ? "Vrai" : "Faux") : string.Join(", ", ReponseSelcMult); //PL
 

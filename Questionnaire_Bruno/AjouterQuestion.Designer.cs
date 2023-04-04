@@ -28,143 +28,155 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pnlBonneReponse = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtEnonce = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioBtnQuestionSelecMult = new System.Windows.Forms.RadioButton();
-            this.radioBtnQuestionVraiFaux = new System.Windows.Forms.RadioButton();
-            this.BtnAjouterQuestions = new System.Windows.Forms.Button();
-            this.BtnAnnulerQuestions = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            pnlBonneReponse = new Panel();
+            label2 = new Label();
+            txtEnonce = new TextBox();
+            label1 = new Label();
+            groupBox2 = new GroupBox();
+            radioBtnQuestionSelecMult = new RadioButton();
+            radioBtnQuestionVraiFaux = new RadioButton();
+            BtnAjouterQuestions = new Button();
+            BtnAnnulerQuestions = new Button();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pnlBonneReponse);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtEnonce);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(16, 16);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1003, 569);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ajouter Question";
+            groupBox1.Controls.Add(pnlBonneReponse);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(txtEnonce);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(groupBox2);
+            groupBox1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point);
+            groupBox1.Location = new Point(23, 27);
+            groupBox1.Margin = new Padding(4, 5, 4, 5);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(4, 5, 4, 5);
+            groupBox1.Size = new Size(1433, 948);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Ajouter Question";
             // 
             // pnlBonneReponse
             // 
-            this.pnlBonneReponse.Location = new System.Drawing.Point(24, 348);
-            this.pnlBonneReponse.Name = "pnlBonneReponse";
-            this.pnlBonneReponse.Size = new System.Drawing.Size(945, 215);
-            this.pnlBonneReponse.TabIndex = 4;
+            pnlBonneReponse.Location = new Point(34, 580);
+            pnlBonneReponse.Margin = new Padding(4, 5, 4, 5);
+            pnlBonneReponse.Name = "pnlBonneReponse";
+            pnlBonneReponse.Size = new Size(1350, 358);
+            pnlBonneReponse.TabIndex = 4;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(24, 307);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 22);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Bonnes Réponses";
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(34, 512);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(252, 33);
+            label2.TabIndex = 3;
+            label2.Text = "Bonnes Réponses";
             // 
             // txtEnonce
             // 
-            this.txtEnonce.Location = new System.Drawing.Point(106, 164);
-            this.txtEnonce.Multiline = true;
-            this.txtEnonce.Name = "txtEnonce";
-            this.txtEnonce.Size = new System.Drawing.Size(753, 141);
-            this.txtEnonce.TabIndex = 2;
+            txtEnonce.Location = new Point(151, 273);
+            txtEnonce.Margin = new Padding(4, 5, 4, 5);
+            txtEnonce.Multiline = true;
+            txtEnonce.Name = "txtEnonce";
+            txtEnonce.Size = new Size(1074, 232);
+            txtEnonce.TabIndex = 2;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(24, 224);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 22);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Énoncé";
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(34, 373);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(113, 33);
+            label1.TabIndex = 1;
+            label1.Text = "Énoncé";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioBtnQuestionSelecMult);
-            this.groupBox2.Controls.Add(this.radioBtnQuestionVraiFaux);
-            this.groupBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(24, 64);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(834, 94);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Choisir le type de questions";
+            groupBox2.Controls.Add(radioBtnQuestionSelecMult);
+            groupBox2.Controls.Add(radioBtnQuestionVraiFaux);
+            groupBox2.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            groupBox2.Location = new Point(34, 107);
+            groupBox2.Margin = new Padding(4, 5, 4, 5);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(4, 5, 4, 5);
+            groupBox2.Size = new Size(1191, 157);
+            groupBox2.TabIndex = 0;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Choisir le type de questions";
             // 
             // radioBtnQuestionSelecMult
             // 
-            this.radioBtnQuestionSelecMult.AutoSize = true;
-            this.radioBtnQuestionSelecMult.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioBtnQuestionSelecMult.Location = new System.Drawing.Point(451, 41);
-            this.radioBtnQuestionSelecMult.Name = "radioBtnQuestionSelecMult";
-            this.radioBtnQuestionSelecMult.Size = new System.Drawing.Size(287, 26);
-            this.radioBtnQuestionSelecMult.TabIndex = 1;
-            this.radioBtnQuestionSelecMult.TabStop = true;
-            this.radioBtnQuestionSelecMult.Text = "Questions Selections Multiples";
-            this.radioBtnQuestionSelecMult.UseVisualStyleBackColor = true;
+            radioBtnQuestionSelecMult.AutoSize = true;
+            radioBtnQuestionSelecMult.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            radioBtnQuestionSelecMult.Location = new Point(644, 68);
+            radioBtnQuestionSelecMult.Margin = new Padding(4, 5, 4, 5);
+            radioBtnQuestionSelecMult.Name = "radioBtnQuestionSelecMult";
+            radioBtnQuestionSelecMult.Size = new Size(438, 37);
+            radioBtnQuestionSelecMult.TabIndex = 1;
+            radioBtnQuestionSelecMult.TabStop = true;
+            radioBtnQuestionSelecMult.Text = "Questions Selections Multiples";
+            radioBtnQuestionSelecMult.UseVisualStyleBackColor = true;
+            radioBtnQuestionSelecMult.CheckedChanged += radioBtnQuestionSelecMult_CheckedChanged;
             // 
             // radioBtnQuestionVraiFaux
             // 
-            this.radioBtnQuestionVraiFaux.AutoSize = true;
-            this.radioBtnQuestionVraiFaux.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioBtnQuestionVraiFaux.Location = new System.Drawing.Point(234, 41);
-            this.radioBtnQuestionVraiFaux.Name = "radioBtnQuestionVraiFaux";
-            this.radioBtnQuestionVraiFaux.Size = new System.Drawing.Size(187, 26);
-            this.radioBtnQuestionVraiFaux.TabIndex = 0;
-            this.radioBtnQuestionVraiFaux.TabStop = true;
-            this.radioBtnQuestionVraiFaux.Text = "Question Vrai/Faux";
-            this.radioBtnQuestionVraiFaux.UseVisualStyleBackColor = true;
+            radioBtnQuestionVraiFaux.AutoSize = true;
+            radioBtnQuestionVraiFaux.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            radioBtnQuestionVraiFaux.Location = new Point(334, 68);
+            radioBtnQuestionVraiFaux.Margin = new Padding(4, 5, 4, 5);
+            radioBtnQuestionVraiFaux.Name = "radioBtnQuestionVraiFaux";
+            radioBtnQuestionVraiFaux.Size = new Size(287, 37);
+            radioBtnQuestionVraiFaux.TabIndex = 0;
+            radioBtnQuestionVraiFaux.TabStop = true;
+            radioBtnQuestionVraiFaux.Text = "Question Vrai/Faux";
+            radioBtnQuestionVraiFaux.UseVisualStyleBackColor = true;
+            radioBtnQuestionVraiFaux.CheckedChanged += radioBtnQuestionVraiFaux_CheckedChanged;
             // 
             // BtnAjouterQuestions
             // 
-            this.BtnAjouterQuestions.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnAjouterQuestions.Location = new System.Drawing.Point(274, 609);
-            this.BtnAjouterQuestions.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnAjouterQuestions.Name = "BtnAjouterQuestions";
-            this.BtnAjouterQuestions.Size = new System.Drawing.Size(125, 26);
-            this.BtnAjouterQuestions.TabIndex = 1;
-            this.BtnAjouterQuestions.Text = "Ajouter";
-            this.BtnAjouterQuestions.UseVisualStyleBackColor = true;
+            BtnAjouterQuestions.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnAjouterQuestions.Location = new Point(391, 1015);
+            BtnAjouterQuestions.Name = "BtnAjouterQuestions";
+            BtnAjouterQuestions.Size = new Size(179, 43);
+            BtnAjouterQuestions.TabIndex = 1;
+            BtnAjouterQuestions.Text = "Ajouter";
+            BtnAjouterQuestions.UseVisualStyleBackColor = true;
+            BtnAjouterQuestions.Click += BtnAjouterQuestions_Click;
             // 
             // BtnAnnulerQuestions
             // 
-            this.BtnAnnulerQuestions.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnAnnulerQuestions.Location = new System.Drawing.Point(521, 609);
-            this.BtnAnnulerQuestions.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnAnnulerQuestions.Name = "BtnAnnulerQuestions";
-            this.BtnAnnulerQuestions.Size = new System.Drawing.Size(125, 26);
-            this.BtnAnnulerQuestions.TabIndex = 2;
-            this.BtnAnnulerQuestions.Text = "Annuler";
-            this.BtnAnnulerQuestions.UseVisualStyleBackColor = true;
+            BtnAnnulerQuestions.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnAnnulerQuestions.Location = new Point(744, 1015);
+            BtnAnnulerQuestions.Name = "BtnAnnulerQuestions";
+            BtnAnnulerQuestions.Size = new Size(179, 43);
+            BtnAnnulerQuestions.TabIndex = 2;
+            BtnAnnulerQuestions.Text = "Annuler";
+            BtnAnnulerQuestions.UseVisualStyleBackColor = true;
+            BtnAnnulerQuestions.Click += BtnAnnulerQuestions_Click;
             // 
             // AjouterQuestion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.BtnAnnulerQuestions);
-            this.Controls.Add(this.BtnAjouterQuestions);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "AjouterQuestion";
-            this.Size = new System.Drawing.Size(1079, 704);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(BtnAnnulerQuestions);
+            Controls.Add(BtnAjouterQuestions);
+            Controls.Add(groupBox1);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "AjouterQuestion";
+            Size = new Size(1541, 1173);
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

@@ -36,6 +36,7 @@ namespace Questionnaire_Bruno
             radioBtnQuestionSelecMult.Checked = false;
             radioBtnQuestionVraiFaux.Checked = false;
             pnlBonneReponse.Controls.Clear();
+
         }
 
         private void BtnAjouterQuestions_Click(object sender, EventArgs e)
@@ -48,13 +49,13 @@ namespace Questionnaire_Bruno
             }
             if (radioBtnQuestionVraiFaux.Checked)
             {
-                ReponseVraiFaux reponseVF = pnlBonneReponse.Controls[0] as ReponseVraiFaux;
+                ReponseVraiFaux reponseVraiFaux = pnlBonneReponse.Controls[0] as ReponseVraiFaux;
                 bool? bonneReponse = null;
-                if (reponseVF.VraiChecked)
+                if (reponseVraiFaux.VraiChecked)
                 {
                     bonneReponse = true;
                 }
-                else if (reponseVF.FauxChecked)
+                else if (reponseVraiFaux.FauxChecked)
                 {
                     bonneReponse = false;
                 }
@@ -68,6 +69,8 @@ namespace Questionnaire_Bruno
                     question.ReponseVraiFaux = bonneReponse.Value;
                     var questionDAO = QuestionDAOFactory.CreerQuestionDAO("FILE");
                     questionDAO.AjouterQuestion(question);
+                    MessageBox.Show("Question ajouté avec succès");
+                    this.BtnAnnulerQuestions_Click(sender, e);
 
                 }
                 else
@@ -81,10 +84,10 @@ namespace Questionnaire_Bruno
                 ReponseSelecMult reponseSM = pnlBonneReponse.Controls[0] as ReponseSelecMult;
                 List<string> reponses = new List<string>();
                 List<string> propositions = new List<string>();
-                if (!string.IsNullOrEmpty(reponseSM.ReponseSelecMult1)) 
+                if (!string.IsNullOrEmpty(reponseSM.ReponseSelecMult1))
                 {
                     propositions.Add(reponseSM.ReponseSelecMult1);
-                    if (reponseSM.checkReponseSelecMult1) 
+                    if (reponseSM.checkReponseSelecMult1)
                     {
                         reponses.Add(reponseSM.ReponseSelecMult1);
                     }

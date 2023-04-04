@@ -8,7 +8,7 @@ namespace Questionnaire_Bruno.DAOs
 {
     internal class QuestionDAOFile : IQuestionsDAO
     {
-        private string path = @"..\..\FILEs\Questions.txt";
+        private string path = @"..\..\..\FILES\Questions.txt";
 
         public void AjouterQuestion(Question question)
         {
@@ -36,7 +36,7 @@ namespace Questionnaire_Bruno.DAOs
             foreach (string line in tab)
             {
                 //secomposer la ligne selon le separateur
-                string[] tabDecomposer = line.Split(';');
+                string[] tabDecomposer = line.Split(";-)");
 
                 //Créer Question
                 Question question = new Question();
@@ -44,8 +44,8 @@ namespace Questionnaire_Bruno.DAOs
                 question.Enonce = tabDecomposer[1];
                 question.Type = bool.Parse(tabDecomposer[2]);
                 question.ReponseVraiFaux = bool.Parse(tabDecomposer[3]);
-                question.ChoixSelcMult = tabDecomposer[4].Split(',').ToList();
-                question.ReponseSelcMult = tabDecomposer[5].Split(',').ToList();
+                question.ChoixSelcMult = tabDecomposer[4].Split(";-)").ToList();
+                question.ReponseSelcMult = tabDecomposer[5].Split(";-)").ToList();
 
                 listQuestions.Add(question);
             }
