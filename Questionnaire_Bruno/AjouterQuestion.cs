@@ -48,13 +48,13 @@ namespace Questionnaire_Bruno
             }
             if (radioBtnQuestionVraiFaux.Checked)
             {
-                ReponseVF reponseVF = pnlBonneReponse.Controls[0] as ReponseVF;
+                ReponseVraiFaux reponseVF = pnlBonneReponse.Controls[0] as ReponseVraiFaux;
                 bool? bonneReponse = null;
-                if (reponseVF.IsVraiChecked)
+                if (reponseVF.VraiChecked)
                 {
                     bonneReponse = true;
                 }
-                else if (reponseVF.IsFauxChecked)
+                else if (reponseVF.FauxChecked)
                 {
                     bonneReponse = false;
                 }
@@ -62,7 +62,10 @@ namespace Questionnaire_Bruno
                 if (bonneReponse.HasValue)
                 {
 
-                    Question question = new Question(txtEnonce.Text, true, bonneReponse.Value);
+                    Question question = new Question();
+                    question.Enonce = enonce;
+                    question.Type = true;
+                    question.ReponseVraiFaux = bonneReponse.Value;
                     var questionDAO = QuestionDAOFactory.CreerQuestionDAO("FILE");
                     questionDAO.AjouterQuestion(question);
 
@@ -75,48 +78,53 @@ namespace Questionnaire_Bruno
 
             else if (radioBtnQuestionSelecMult.Checked)
             {
-                ReponseSM reponseSM = pnlBonneReponse.Controls[0] as ReponseSM;
+                ReponseSelecMult reponseSM = pnlBonneReponse.Controls[0] as ReponseSelecMult;
                 List<string> reponses = new List<string>();
                 List<string> propositions = new List<string>();
-                if (!string.IsNullOrEmpty(reponseSM.Reponse1))
+                if (!string.IsNullOrEmpty(reponseSM.ReponseSelecMult1)) 
                 {
-                    propositions.Add(reponseSM.Reponse1);
-                    if (reponseSM.Reponse1Checked)
+                    propositions.Add(reponseSM.ReponseSelecMult1);
+                    if (reponseSM.checkReponseSelecMult1) 
                     {
-                        reponses.Add(reponseSM.Reponse1);
+                        reponses.Add(reponseSM.ReponseSelecMult1);
                     }
                 }
-                if (!string.IsNullOrEmpty(reponseSM.Reponse2))
+                if (!string.IsNullOrEmpty(reponseSM.ReponseSelecMult2))
                 {
-                    propositions.Add(reponseSM.Reponse2);
-                    if (reponseSM.Reponse2Checked)
+                    propositions.Add(reponseSM.ReponseSelecMult2);
+                    if (reponseSM.checkReponseSelecMult2)
                     {
-                        reponses.Add(reponseSM.Reponse2);
+                        reponses.Add(reponseSM.ReponseSelecMult2);
                     }
                 }
-                if (!string.IsNullOrEmpty(reponseSM.Reponse3))
+                if (!string.IsNullOrEmpty(reponseSM.ReponseSelecMult3))
                 {
-                    propositions.Add(reponseSM.Reponse3);
-                    if (reponseSM.Reponse3Checked)
+                    propositions.Add(reponseSM.ReponseSelecMult3);
+                    if (reponseSM.checkReponseSelecMult3)
                     {
-                        reponses.Add(reponseSM.Reponse3);
+                        reponses.Add(reponseSM.ReponseSelecMult3);
                     }
                 }
-                if (!string.IsNullOrEmpty(reponseSM.Reponse4))
+                if (!string.IsNullOrEmpty(reponseSM.ReponseSelecMult4))
                 {
-                    propositions.Add(reponseSM.Reponse4);
-                    if (reponseSM.Reponse4Checked)
+                    propositions.Add(reponseSM.ReponseSelecMult4);
+                    if (reponseSM.checkReponseSelecMult4)
                     {
-                        reponses.Add(reponseSM.Reponse4);
+                        reponses.Add(reponseSM.ReponseSelecMult4);
                     }
                 }
                 if (propositions.Count > 0 && reponses.Count > 0)
                 {
-                    Question question = new Question(txtEnonce.Text, false, propositions, reponses);
+                    Question question = new Question();
+                    question.Enonce = enonce;
+                    question.Type = false;
+                    question.ChoixSelcMult = propositions;
+                    question.ReponseSelcMult = reponses;
+
                     var questionDAO = QuestionDAOFactory.CreerQuestionDAO("FILE");
-                    questionDAO.Ajouter(question);
+                    questionDAO.AjouterQuestion(question);
                     MessageBox.Show("Question ajouté avec succès");
-                    this.btnAnnulerQuestions_Click(sender, e);
+                    this.BtnAnnulerQuestions_Click(sender, e);
                 }
                 else
                 {

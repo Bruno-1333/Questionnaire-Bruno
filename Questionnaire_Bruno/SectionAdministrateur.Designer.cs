@@ -38,7 +38,7 @@
             MenuAdmAjouterQuestion = new ToolStripMenuItem();
             MenuAdmSupprimerQuestion = new ToolStripMenuItem();
             MenuAdmModifierQuestion = new ToolStripMenuItem();
-            MenuAdmAfficherQuestion = new ToolStripMenuItem();
+            MenuAdmConsulterQuestion = new ToolStripMenuItem();
             resultatToolStripMenuItem = new ToolStripMenuItem();
             MenuAdmAfficherResultat = new ToolStripMenuItem();
             PannelPrincipale = new Panel();
@@ -51,8 +51,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { gestionUserToolStripMenuItem, gestionQuestionToolStripMenuItem, resultatToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(9, 3, 0, 3);
-            menuStrip1.Size = new Size(1514, 35);
+            menuStrip1.Size = new Size(1060, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -60,103 +59,101 @@
             // 
             gestionUserToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MenuAdmAjouterUtilisateur, MenuAdmSupprimerUtilisateur, MenuAdmModifierUtilisateur, MenuAdmAfficherUtilisateur });
             gestionUserToolStripMenuItem.Name = "gestionUserToolStripMenuItem";
-            gestionUserToolStripMenuItem.Size = new Size(171, 29);
+            gestionUserToolStripMenuItem.Size = new Size(115, 20);
             gestionUserToolStripMenuItem.Text = "Gestion Utilisateur";
             // 
             // MenuAdmAjouterUtilisateur
             // 
             MenuAdmAjouterUtilisateur.Name = "MenuAdmAjouterUtilisateur";
-            MenuAdmAjouterUtilisateur.Size = new Size(280, 34);
+            MenuAdmAjouterUtilisateur.Size = new Size(185, 22);
             MenuAdmAjouterUtilisateur.Text = "Ajouter Utilisateur";
             MenuAdmAjouterUtilisateur.Click += MenuAdmAjouterUtilisateur_Click;
             // 
             // MenuAdmSupprimerUtilisateur
             // 
             MenuAdmSupprimerUtilisateur.Name = "MenuAdmSupprimerUtilisateur";
-            MenuAdmSupprimerUtilisateur.Size = new Size(280, 34);
+            MenuAdmSupprimerUtilisateur.Size = new Size(185, 22);
             MenuAdmSupprimerUtilisateur.Text = "Supprimer Utilisateur";
             MenuAdmSupprimerUtilisateur.Click += MenuAdmSupprimerUtilisateur_Click;
             // 
             // MenuAdmModifierUtilisateur
             // 
             MenuAdmModifierUtilisateur.Name = "MenuAdmModifierUtilisateur";
-            MenuAdmModifierUtilisateur.Size = new Size(280, 34);
+            MenuAdmModifierUtilisateur.Size = new Size(185, 22);
             MenuAdmModifierUtilisateur.Text = "Modifier Utilisateur";
             MenuAdmModifierUtilisateur.Click += MenuAdmModifierUtilisateur_Click;
             // 
             // MenuAdmAfficherUtilisateur
             // 
             MenuAdmAfficherUtilisateur.Name = "MenuAdmAfficherUtilisateur";
-            MenuAdmAfficherUtilisateur.Size = new Size(280, 34);
+            MenuAdmAfficherUtilisateur.Size = new Size(185, 22);
             MenuAdmAfficherUtilisateur.Text = "Chercher Utilisateurs";
             MenuAdmAfficherUtilisateur.Click += MenuAdmAfficherUtilisateur_Click;
             // 
             // gestionQuestionToolStripMenuItem
             // 
-            gestionQuestionToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MenuAdmAjouterQuestion, MenuAdmSupprimerQuestion, MenuAdmModifierQuestion, MenuAdmAfficherQuestion });
+            gestionQuestionToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MenuAdmAjouterQuestion, MenuAdmSupprimerQuestion, MenuAdmModifierQuestion, MenuAdmConsulterQuestion });
             gestionQuestionToolStripMenuItem.Name = "gestionQuestionToolStripMenuItem";
-            gestionQuestionToolStripMenuItem.Size = new Size(165, 29);
+            gestionQuestionToolStripMenuItem.Size = new Size(110, 20);
             gestionQuestionToolStripMenuItem.Text = "Gestion Question";
             // 
             // MenuAdmAjouterQuestion
             // 
             MenuAdmAjouterQuestion.Name = "MenuAdmAjouterQuestion";
-            MenuAdmAjouterQuestion.Size = new Size(274, 34);
+            MenuAdmAjouterQuestion.Size = new Size(181, 22);
             MenuAdmAjouterQuestion.Text = "Ajouter Question";
             MenuAdmAjouterQuestion.Click += MenuAdmAjouterQuestion_Click;
             // 
             // MenuAdmSupprimerQuestion
             // 
             MenuAdmSupprimerQuestion.Name = "MenuAdmSupprimerQuestion";
-            MenuAdmSupprimerQuestion.Size = new Size(274, 34);
+            MenuAdmSupprimerQuestion.Size = new Size(181, 22);
             MenuAdmSupprimerQuestion.Text = "Supprimer Question";
             MenuAdmSupprimerQuestion.Click += MenuAdmSupprimerQuestion_Click;
             // 
             // MenuAdmModifierQuestion
             // 
             MenuAdmModifierQuestion.Name = "MenuAdmModifierQuestion";
-            MenuAdmModifierQuestion.Size = new Size(274, 34);
+            MenuAdmModifierQuestion.Size = new Size(181, 22);
             MenuAdmModifierQuestion.Text = "Modifier Question";
             MenuAdmModifierQuestion.Click += MenuAdmModifierQuestion_Click;
             // 
-            // MenuAdmAfficherQuestion
+            // MenuAdmConsulterQuestion
             // 
-            MenuAdmAfficherQuestion.Name = "MenuAdmAfficherQuestion";
-            MenuAdmAfficherQuestion.Size = new Size(274, 34);
-            MenuAdmAfficherQuestion.Text = "Consulter Questions";
-            MenuAdmAfficherQuestion.Click += MenuAdmAfficherQuestion_Click;
+            MenuAdmConsulterQuestion.Name = "MenuAdmConsulterQuestion";
+            MenuAdmConsulterQuestion.Size = new Size(181, 22);
+            MenuAdmConsulterQuestion.Text = "Consulter Questions";
+            MenuAdmConsulterQuestion.Click += MenuAdmConsulterQuestion_Click;
             // 
             // resultatToolStripMenuItem
             // 
             resultatToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MenuAdmAfficherResultat });
             resultatToolStripMenuItem.Name = "resultatToolStripMenuItem";
-            resultatToolStripMenuItem.Size = new Size(90, 29);
+            resultatToolStripMenuItem.Size = new Size(61, 20);
             resultatToolStripMenuItem.Text = "Resultat";
             // 
             // MenuAdmAfficherResultat
             // 
             MenuAdmAfficherResultat.Name = "MenuAdmAfficherResultat";
-            MenuAdmAfficherResultat.Size = new Size(175, 34);
+            MenuAdmAfficherResultat.Size = new Size(116, 22);
             MenuAdmAfficherResultat.Text = "Afficher";
             // 
             // PannelPrincipale
             // 
             PannelPrincipale.Dock = DockStyle.Fill;
-            PannelPrincipale.Location = new Point(0, 35);
-            PannelPrincipale.Margin = new Padding(4, 5, 4, 5);
+            PannelPrincipale.Location = new Point(0, 24);
             PannelPrincipale.Name = "PannelPrincipale";
-            PannelPrincipale.Size = new Size(1514, 1040);
+            PannelPrincipale.Size = new Size(1060, 614);
             PannelPrincipale.TabIndex = 1;
             // 
             // SectionAdministrateur
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1514, 1075);
+            ClientSize = new Size(1060, 638);
             Controls.Add(PannelPrincipale);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(4, 5, 4, 5);
             Name = "SectionAdministrateur";
             Text = "SectionAdministrateur";
             menuStrip1.ResumeLayout(false);
@@ -177,7 +174,7 @@
         private ToolStripMenuItem MenuAdmAjouterQuestion;
         private ToolStripMenuItem MenuAdmModifierQuestion;
         private ToolStripMenuItem MenuAdmSupprimerQuestion;
-        private ToolStripMenuItem MenuAdmAfficherQuestion;
+        private ToolStripMenuItem MenuAdmConsulterQuestion;
         private ToolStripMenuItem resultatToolStripMenuItem;
         private ToolStripMenuItem MenuAdmAfficherResultat;
         private Panel PannelPrincipale;

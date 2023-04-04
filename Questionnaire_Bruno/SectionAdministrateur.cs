@@ -59,7 +59,7 @@ namespace Questionnaire_Bruno
             PannelPrincipale.Controls.Add(new ModifierQuestion());
         }
 
-        private void MenuAdmAfficherQuestion_Click(object sender, EventArgs e)
+        private void MenuAdmConsulterQuestion_Click(object sender, EventArgs e)
         {
             PannelPrincipale.Controls.Clear();
             PannelPrincipale.Controls.Add(new ConsulterQuestions());

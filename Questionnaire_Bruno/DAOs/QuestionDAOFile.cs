@@ -12,6 +12,8 @@ namespace Questionnaire_Bruno.DAOs
 
         public void AjouterQuestion(Question question)
         {
+            question.Id = GenerateUniqueId();
+
             if(ChercherParId(question.Id)== null)
             {
                 string contenu = question.ToString() + "\n";
@@ -40,12 +42,10 @@ namespace Questionnaire_Bruno.DAOs
                 Question question = new Question();
                 question.Id = int.Parse(tabDecomposer[0]);
                 question.Enonce = tabDecomposer[1];
-                question.Poids = int.Parse(tabDecomposer[2]);
-                question.Type = bool.Parse(tabDecomposer[3]);
-                for (int i = 4; i < tabDecomposer.Length; i++)
-                {
-                    question.Reponses.Add(bool.Parse(tabDecomposer[i]));
-                }
+                question.Type = bool.Parse(tabDecomposer[2]);
+                question.ReponseVraiFaux = bool.Parse(tabDecomposer[3]);
+                question.ChoixSelcMult = tabDecomposer[4].Split(',').ToList();
+                question.ReponseSelcMult = tabDecomposer[5].Split(',').ToList();
 
                 listQuestions.Add(question);
             }
@@ -74,6 +74,42 @@ namespace Questionnaire_Bruno.DAOs
             foreach (Question q in listQuestions)
             {
                 AjouterQuestion(question);
+            }
+        }
+        private int GenerateUniqueId()
+        {
+          
+            List<Question> questions = ListerQuestions();
+
+            if (questions.Count == 0)
+            {
+                return 1;
+            }
+            else
+            {
+              
+                questions.Sort((x, y) => x.Id.CompareTo(y.Id));
+
+               
+                int currentId = 1;
+
+               
+                foreach (Question q in questions)
+                {
+                    if (q.Id == currentId)
+                    {
+                        
+                        currentId++;
+                    }
+                    else if (q.Id > currentId)
+                    {
+                        
+                        break;
+                    }
+                }
+
+               
+                return currentId;
             }
         }
     }

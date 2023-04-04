@@ -16,5 +16,15 @@ namespace Questionnaire_Bruno
         {
             InitializeComponent();
         }
+        public bool VraiChecked
+        {
+            get { return radioBtnReponseVrai.Checked; }
+            set { radioBtnReponseVrai.Checked = value; }
+        }
+        public bool FauxChecked
+        {
+            get { return radioBtnReponseFaux.Checked; }
+            set { radioBtnReponseFaux.Checked = value; }
+        }
     }
 }
