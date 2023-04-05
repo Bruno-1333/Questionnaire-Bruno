@@ -24,14 +24,14 @@ namespace Questionnaire_Bruno
             string premon = textPrenon.Text;
             string telephone = textTelephone.Text;
             bool type = (radioButtonUser.Checked == true) ? false : true; // recuperer le type d'utilisateur
-            int adrNum = int.Parse(textNumero.Text);
-            string adrRue = textRue.Text;
-            string adrVille = textVille.Text;
-            string adrProvince = textProvince.Text;
-            string adrCP = textCodePostal.Text;
-            string login = textLogin.Text;
-            string motPasse = textMotPasse.Text;
-            string confirmerMotPasse = textConfirmerMotPasse.Text;
+            int adrNum = int.Parse(textBoxAdrNum.Text);
+            string adrRue = textBoxAdrRue.Text;
+            string adrVille = textBoxAdrVille.Text;
+            string adrProvince = textBoxAdrProvince.Text;
+            string adrCP = textBoxCP.Text;
+            string login = textBoxLogin.Text;
+            string motPasse = textBoxMP.Text;
+            string confirmerMotPasse = textBoxConfirmeMotPasse.Text;
 
             if (motPasse != confirmerMotPasse) // validation do mot de passe
             {
@@ -46,29 +46,28 @@ namespace Questionnaire_Bruno
 
                 var userDAO = UserDAOFactory.CreerUserDAO("FILE"); // creation d'un objet userDAO
                 userDAO.Ajouuter(user); // ajouter l'utilisateur dans la BD
-                this.Hide(); // cacher la fenetre
+               buttonAnnuler_Click(sender, e);
 
             }
+
         }
+        
 
         private void buttonAnnuler_Click(object sender, EventArgs e)
         {
             textNom.Text = string.Empty; // vider les champs
             textPrenon.Text = string.Empty;
             textTelephone.Text = string.Empty;
-            radioButtonAdm.Checked = false;
-            textNumero.Text = string.Empty;
-            textRue.Text = string.Empty;
-            textVille.Text = string.Empty;
-            textProvince.Text = string.Empty;
-            textCodePostal.Text = string.Empty;
-            textLogin.Text = string.Empty;
-            textMotPasse.Text = string.Empty;
-            textConfirmerMotPasse.Text = string.Empty;
-            //if(this.ParentForm.Name == "Form2")
-            //{
-            //    this.ParentForm.Close();
-            //}
+            radioButtonUser.Checked = false;
+            textBoxAdrNum.Text = string.Empty;
+            textBoxAdrRue.Text = string.Empty;
+            textBoxAdrVille.Text = string.Empty;
+            textBoxAdrProvince.Text = string.Empty;
+            textBoxCP.Text = string.Empty;
+            textBoxLogin.Text = string.Empty;
+            textBoxMP.Text = string.Empty;
+            textBoxConfirmeMotPasse.Text = string.Empty;
+
 
 
         }

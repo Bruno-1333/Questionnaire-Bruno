@@ -65,7 +65,7 @@
             label11 = new Label();
             textBoxMP = new TextBox();
             label12 = new Label();
-            textBox8 = new TextBox();
+            textBoxConfirmeMotPasse = new TextBox();
             groupBox5 = new GroupBox();
             groupBox8 = new GroupBox();
             label4 = new Label();
@@ -395,7 +395,7 @@
             groupBox9.Controls.Add(label11);
             groupBox9.Controls.Add(textBoxMP);
             groupBox9.Controls.Add(label12);
-            groupBox9.Controls.Add(textBox8);
+            groupBox9.Controls.Add(textBoxConfirmeMotPasse);
             groupBox9.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Italic, GraphicsUnit.Point);
             groupBox9.Location = new Point(17, 423);
             groupBox9.Name = "groupBox9";
@@ -458,12 +458,12 @@
             label12.TabIndex = 59;
             label12.Text = "Confirmer Mot de Passe";
             // 
-            // textBox8
+            // textBoxConfirmeMotPasse
             // 
-            textBox8.Location = new Point(202, 73);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(243, 21);
-            textBox8.TabIndex = 60;
+            textBoxConfirmeMotPasse.Location = new Point(202, 73);
+            textBoxConfirmeMotPasse.Name = "textBoxConfirmeMotPasse";
+            textBoxConfirmeMotPasse.Size = new Size(243, 21);
+            textBoxConfirmeMotPasse.TabIndex = 60;
             // 
             // groupBox5
             // 
@@ -784,7 +784,7 @@
         private Label label11;
         private TextBox textBoxMP;
         private Label label12;
-        private TextBox textBox8;
+        private TextBox textBoxConfirmeMotPasse;
         private GroupBox groupBox8;
         private Label label4;
         private TextBox textBoxAdrNum;

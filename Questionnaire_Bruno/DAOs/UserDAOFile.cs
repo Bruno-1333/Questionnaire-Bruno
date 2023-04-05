@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,6 +55,7 @@ namespace Questionnaire_Bruno.DAOs
                 user.Login = tabDecomposer[9];
                 user.MotPasse = tabDecomposer[10];
                 listUsers.Add(user);
+
 
             }
             return listUsers; // Retourner la liste de users

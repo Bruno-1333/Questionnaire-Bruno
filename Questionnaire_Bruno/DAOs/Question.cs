@@ -36,7 +36,7 @@ namespace Questionnaire_Bruno.DAOs
 
         public override string ToString()
         {
-            return Id + ";-)" + Enonce + ";-)" + Type + ";-)" + ReponseVraiFaux + ";-)" + ChoixSelcMult + ";-)" + ReponseSelcMult; //string.Join(", " ,ChoixSelcMult) + ";-)" + string.Join(", " ,ReponseSelcMult); 
+            return Id + ";-)" + Enonce + ";-)" + Type + ";-)" + ReponseVraiFaux + ";-)" + ChoixSelcMult + ";-)" + ReponseSelcMult;
         }
 
         public override bool Equals(object? obj)
@@ -46,3 +46,10 @@ namespace Questionnaire_Bruno.DAOs
 
     }
 }
+
+
+
+
+
+
+//return Id + ";-)" + Enonce + ";-)" + Type + ";-)" + ReponseVraiFaux + ";-)" + string.Join(", ", ChoixSelcMult) + ";-)" + string.Join(", ", ReponseSelcMult);

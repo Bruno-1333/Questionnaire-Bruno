@@ -133,7 +133,7 @@ namespace Questionnaire_Bruno
                 if (bonneReponse.HasValue)
                 {
                     Question question = new Question(txtEnonce.Text, true, bonneReponse.Value, null, null);
-                    question.Id = id;
+                    //question.Id = id;
                     var questionDAO = QuestionDAOFactory.CreerQuestionDAO("FILE");
                     questionDAO.ModifierQuestion(question);
                 }
@@ -144,52 +144,47 @@ namespace Questionnaire_Bruno
             }
             else if (radioBtnQuestionSelectMult.Checked)
             {
-                ReponseSelecMult reponseSM = pnlReponses.Controls[0] as ReponseSelecMult;
+                ReponseSelecMult reponseSelMult = pnlReponses.Controls[0] as ReponseSelecMult;
                 List<string> reponses = new List<string>();
                 List<string> propositions = new List<string>();
 
-
-                propositions.Add(reponseSM.ReponseSelecMult1);
-                if (reponseSM.checkReponseSelecMult1)
+                propositions.Add(reponseSelMult.ReponseSelecMult1);
+                if (reponseSelMult.checkReponseSelecMult1)
                 {
-                    reponses.Add(reponseSM.ReponseSelecMult1);
+                    reponses.Add(reponseSelMult.ReponseSelecMult1);
                 }
-
-                propositions.Add(reponseSM.ReponseSelecMult2);
-                if (reponseSM.checkReponseSelecMult2)
+                propositions.Add(reponseSelMult.ReponseSelecMult2);
+                if (reponseSelMult.checkReponseSelecMult2)
                 {
-                    reponses.Add(reponseSM.ReponseSelecMult2);
+                    reponses.Add(reponseSelMult.ReponseSelecMult2);
                 }
-
-                propositions.Add(reponseSM.ReponseSelecMult3);
-                if (reponseSM.checkReponseSelecMult2)
+                propositions.Add(reponseSelMult.ReponseSelecMult3);
+                if (reponseSelMult.checkReponseSelecMult2)
                 {
-                    reponses.Add(reponseSM.ReponseSelecMult3);
+                    reponses.Add(reponseSelMult.ReponseSelecMult3);
                 }
-
-                propositions.Add(reponseSM.ReponseSelecMult4);
-                if (reponseSM.checkReponseSelecMult2)
+                propositions.Add(reponseSelMult.ReponseSelecMult4);
+                if (reponseSelMult.checkReponseSelecMult2)
                 {
-                    reponses.Add(reponseSM.ReponseSelecMult4);
+                    reponses.Add(reponseSelMult.ReponseSelecMult4);
                 }
-
                 if (propositions.Count > 0 && reponses.Count > 0)
                 {
                     Question question = new Question(txtEnonce.Text, false, false, propositions, reponses);
                     question.Id = id;
                     var questionDAO = QuestionDAOFactory.CreerQuestionDAO("FILE");
                     questionDAO.ModifierQuestion(question);
-                    MessageBox.Show("Question modifié avec succès");
+                    MessageBox.Show("Question modifié");
                     this.btnAnnuler_Click(sender, e);
                 }
                 else
                 {
-                    MessageBox.Show("Vous devez entrer au moins une proposition et une bonne réponse");
+                    MessageBox.Show("Entrer avec une proposition et une bonne réponse");
                 }
             }
             else
             {
-                MessageBox.Show("Vous devez choisir le type de question");
+                MessageBox.Show("Chosir le type de question");
             }
         }
 

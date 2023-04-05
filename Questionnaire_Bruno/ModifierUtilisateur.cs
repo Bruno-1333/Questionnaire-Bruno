@@ -1,4 +1,5 @@
-﻿using Questionnaire_Bruno.DAOs;
+﻿using Microsoft.VisualBasic.Logging;
+using Questionnaire_Bruno.DAOs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,6 +42,9 @@ namespace Questionnaire_Bruno
                 textBoxLogin.Text = user.Login;
                 textBoxMP.Text = user.MotPasse;
 
+              
+
+
             }
 
         }
@@ -82,7 +86,9 @@ namespace Questionnaire_Bruno
 
                 var userDAO = UserDAOFactory.CreerUserDAO("FILE");
                 userDAO.Modifier(u);
+                btnAnnuler_Click(sender, e);
 
+          
             }
             catch (Exception ex)
             {
