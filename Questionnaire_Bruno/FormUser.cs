@@ -34,6 +34,16 @@ namespace Questionnaire_Bruno
             string motPasse = textMotPasse.Text;
             string confirmerMotPasse = textConfirmerMotPasse.Text; 
 
+            User usagerChercher = UserDAOFactory.CreerUserDAO("FILE").ChercherParLogin(login); // chercher l'utilisateur dans la BD
+            if(usagerChercher != null) // validation du login
+            {
+                msgError.Visible = true; // afficher le message d'erreur
+            }
+            else
+            {
+                msgError.Visible = false; // cacher le message d'erreur
+            }
+
             if (motPasse != confirmerMotPasse) // validation do mot de passe
             {
                 msgError.Visible = true; // afficher le message d'erreur
