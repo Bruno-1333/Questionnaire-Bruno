@@ -71,11 +71,11 @@ namespace Questionnaire_Bruno
                         {
                             reponseSelecMult.checkReponseSelecMult2 = true;
                         }
-                        if (reponseSelecMult.ReponseSelecMult2.Contains(reponseSelecMult.ReponseSelecMult3))
+                        if (reponseSelecMult.ReponseSelecMult3.Contains(reponseSelecMult.ReponseSelecMult3))
                         {
                             reponseSelecMult.checkReponseSelecMult3 = true;
                         }
-                        if (reponseSelecMult.ReponseSelecMult2.Contains(reponseSelecMult.ReponseSelecMult2))
+                        if (reponseSelecMult.ReponseSelecMult4.Contains(reponseSelecMult.ReponseSelecMult4))
                         {
                             reponseSelecMult.checkReponseSelecMult4 = true;
                         }

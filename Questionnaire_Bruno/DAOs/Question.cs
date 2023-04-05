@@ -15,8 +15,8 @@ namespace Questionnaire_Bruno.DAOs
         public bool ReponseVraiFaux { get; set; }
         public List<string> ChoixSelcMult { get; set; } = new List<string>();
         public List<string> ReponseSelcMult { get; set; } = new List<string>();
-        public string ChoixDisplay => Type ? "" : string.Join(", ", ChoixSelcMult); //Pl
-        public string ReponseDisplay => Type ? (ReponseVraiFaux ? "Vrai" : "Faux") : string.Join(", ", ReponseSelcMult); //PL
+        public string ChoixDisplay { get; set; }                                     
+        public string ReponseDisplay { get; set; }  
 
 
         public Question( string enonce, bool type,bool reponseVraiFaux , List<string> choixSelecMult, List<string> choixVraiFeaux):this()
@@ -36,7 +36,7 @@ namespace Questionnaire_Bruno.DAOs
 
         public override string ToString()
         {
-            return Id + ";-)" + Enonce + ";-)" + Type + ";-)" + ReponseVraiFaux + ";-)" + ChoixSelcMult + ";-)" + ReponseSelcMult;
+            return Id + ";-)" + Enonce + ";-)" + Type + ";-)" + ReponseVraiFaux + ";-)" + string.Join(", ", ChoixSelcMult) + ";-)" + string.Join(", ", ReponseSelcMult);
         }
 
         public override bool Equals(object? obj)
@@ -51,5 +51,3 @@ namespace Questionnaire_Bruno.DAOs
 
 
 
-
-//return Id + ";-)" + Enonce + ";-)" + Type + ";-)" + ReponseVraiFaux + ";-)" + string.Join(", ", ChoixSelcMult) + ";-)" + string.Join(", ", ReponseSelcMult);

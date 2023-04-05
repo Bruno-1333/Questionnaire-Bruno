@@ -140,6 +140,7 @@
             // 
             // PannelPrincipale
             // 
+            PannelPrincipale.AutoScroll = true;
             PannelPrincipale.Dock = DockStyle.Fill;
             PannelPrincipale.Location = new Point(0, 24);
             PannelPrincipale.Name = "PannelPrincipale";

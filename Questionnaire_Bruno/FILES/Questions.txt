@@ -1,12 +1,1 @@
-1;-)Capital;-)False;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
-2;-)KHKJKJHKHHKJHKJH;-)False;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
-3;-)1+1=100000000000;-)True;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
-4;-)1+1=10101010;-)True;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
-5;-)1+1=20202020;-)True;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
-6;-)1+1=505050;-)True;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
-7;-)4+4=8;-)True;-)True;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
-8;-)capitel Canada;-)False;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
-9;-)4+4=80;-)True;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
-10;-)1+1=30;-)True;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
-11;-)GJGJHGJH;-)True;-)False;-)System.Collections.Generic.List`1[System.String];-)System.Collections.Generic.List`1[System.String]
-12;-)1+1=10000;-)True;-)False;-);-)
+

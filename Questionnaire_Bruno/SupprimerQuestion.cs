@@ -31,64 +31,9 @@ namespace Questionnaire_Bruno
             {
                 MessageBox.Show("Id nes pas valid");
             }
-           
-            
-            
-
-
-
-
-            //if (int.TryParse(txtIdSupprimerQuestion.Text, out int id))
-            //{
-            //    // Verifica se o ID é válido
-            //    Question question = QuestionDAOFactory.CreerQuestionDAO("FILE").ChercherParId(id);
-            //    if (question == null) // ==
-            //    {
-            //        MessageBox.Show("Question non trouvée");
-            //    }
-            //    else
-            //    {
-            //        QuestionDAOFactory.CreerQuestionDAO("FILE").SupprimerQuestion(question);
-            //        MessageBox.Show("Suppression réussie");
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Entrez un ID valide");
-            //}
-
-            //if (int.TryParse(txtIdSupprimerQuestion.Text, out int id))
-            //{
-            //    {
-            //        MessageBox.Show("Entrer un ID de question valide");
-            //    }
-
-            //    Question question = QuestionDAOFactory.CreerQuestionDAO("FILE").ChercherParId(id);
-            //    if (question != null)
-            //    {
-            //        MessageBox.Show("Question nes pas trouve");
-            //    }
-            //    else
-            //    {
-            //        QuestionDAOFactory.CreerQuestionDAO("FILE").SupprimerQuestion(question);
-            //        MessageBox.Show("Supremè avec succès");
-            //    }
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Entrer un ID valide");
-            //}
-
-
+         
 
         }
-
-
-
-
-
-
 
     }
 }

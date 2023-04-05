@@ -42,8 +42,10 @@ namespace Questionnaire_Bruno.DAOs
                 question.Enonce = tabDecomposer[1];
                 question.Type = bool.Parse(tabDecomposer[2]);
                 question.ReponseVraiFaux = bool.Parse(tabDecomposer[3]);
-                question.ChoixSelcMult = tabDecomposer[4].Split(";-)").ToList();
-                question.ReponseSelcMult = tabDecomposer[5].Split(";-)").ToList();
+                question.ChoixSelcMult = tabDecomposer[4].Split(", ").ToList();
+                question.ReponseSelcMult = tabDecomposer[5].Split(", ").ToList();
+                question.ChoixDisplay = tabDecomposer[4];
+                question.ReponseDisplay = tabDecomposer[5];
 
                 listQuestions.Add(question);
             }
