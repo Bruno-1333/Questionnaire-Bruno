@@ -46,7 +46,7 @@ namespace Questionnaire_Bruno
                 else
                 {
 
-                    PanelUtilisateur panelUtilisateur = new PanelUtilisateur();
+                    PanelUtilisateur panelUtilisateur = new PanelUtilisateur(user);
                     panelUtilisateur.Show();
 
                 }

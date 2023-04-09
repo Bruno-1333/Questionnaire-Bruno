@@ -10,10 +10,8 @@ namespace Questionnaire_Bruno.DAOs
     {
         //public static IResultatDAO CreerResultatDAO(string type)
         //{
-        //    if (type == "FILE")
-        //        return new ResultatDAOFile();
-        //    else
-        //        return new ResultatDAOBD();
+        //    if(type == "FILES") return new ResultatDAOFile();
+        //    else return new ResultatDAOBD();
 
         //}
     }
