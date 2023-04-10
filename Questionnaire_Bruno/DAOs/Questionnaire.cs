@@ -11,7 +11,7 @@ namespace Questionnaire_Bruno.DAOs
         private static int ctp = 0;
         public int Id { get; internal set; }
         public int ScoreReussi { get; set; } = 0;
-        public int ScorePassage { get; set; }
+        public int ScorePassage { get; set; } = 5;
         public string LoginUtilisateur { get; set; }
         public List<Question> Questions { get; set; }
 
