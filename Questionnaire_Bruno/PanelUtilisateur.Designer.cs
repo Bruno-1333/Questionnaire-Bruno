@@ -29,29 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelUtilisateur));
-            btnRegle = new Button();
             btnCommencer = new Button();
             lblNonUtilisateurCourant = new Label();
-            textBox1 = new TextBox();
+            label1 = new Label();
+            txtNbrQuestions = new TextBox();
+            txtScore = new TextBox();
+            label2 = new Label();
             SuspendLayout();
-            // 
-            // btnRegle
-            // 
-            btnRegle.BackColor = Color.Transparent;
-            btnRegle.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnRegle.Location = new Point(12, 541);
-            btnRegle.Name = "btnRegle";
-            btnRegle.Size = new Size(196, 46);
-            btnRegle.TabIndex = 1;
-            btnRegle.Text = "Règle";
-            btnRegle.UseVisualStyleBackColor = false;
-            btnRegle.Click += btnRegle_Click;
             // 
             // btnCommencer
             // 
             btnCommencer.BackColor = Color.Transparent;
             btnCommencer.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCommencer.Location = new Point(253, 541);
+            btnCommencer.Location = new Point(301, 543);
             btnCommencer.Name = "btnCommencer";
             btnCommencer.Size = new Size(196, 46);
             btnCommencer.TabIndex = 2;
@@ -65,37 +55,63 @@
             lblNonUtilisateurCourant.BackColor = Color.Transparent;
             lblNonUtilisateurCourant.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point);
             lblNonUtilisateurCourant.ForeColor = Color.Gold;
-            lblNonUtilisateurCourant.Location = new Point(954, 84);
+            lblNonUtilisateurCourant.Location = new Point(945, 83);
             lblNonUtilisateurCourant.Name = "lblNonUtilisateurCourant";
             lblNonUtilisateurCourant.Size = new Size(31, 37);
             lblNonUtilisateurCourant.TabIndex = 6;
             lblNonUtilisateurCourant.Text = "*";
             lblNonUtilisateurCourant.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // label1
             // 
-            textBox1.BackColor = Color.Red;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = SystemColors.MenuText;
-            textBox1.Location = new Point(12, 128);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(413, 180);
-            textBox1.TabIndex = 2;
-            textBox1.Text = "A regle do juex\r\n\r\nLe jouxxxxxxxxxxx\r\nxxxxx\r\nxxxxxx Score de Passage YYYYYYYY";
-            textBox1.Visible = false;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(23, 204);
+            label1.Name = "label1";
+            label1.Size = new Size(346, 27);
+            label1.TabIndex = 7;
+            label1.Text = "Choisir le numero des question";
+            // 
+            // txtNbrQuestions
+            // 
+            txtNbrQuestions.Location = new Point(375, 210);
+            txtNbrQuestions.Name = "txtNbrQuestions";
+            txtNbrQuestions.Size = new Size(100, 23);
+            txtNbrQuestions.TabIndex = 8;
+            // 
+            // txtScore
+            // 
+            txtScore.Location = new Point(348, 300);
+            txtScore.Name = "txtScore";
+            txtScore.Size = new Size(100, 23);
+            txtScore.TabIndex = 10;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(23, 294);
+            label2.Name = "label2";
+            label2.Size = new Size(309, 27);
+            label2.TabIndex = 9;
+            label2.Text = "Choisir le score de passage";
             // 
             // PanelUtilisateur
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1279, 611);
-            Controls.Add(textBox1);
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1279, 612);
+            Controls.Add(txtScore);
+            Controls.Add(label2);
+            Controls.Add(txtNbrQuestions);
+            Controls.Add(label1);
             Controls.Add(lblNonUtilisateurCourant);
             Controls.Add(btnCommencer);
-            Controls.Add(btnRegle);
+            DoubleBuffered = true;
             Name = "PanelUtilisateur";
             Text = "PanelUtilisateur";
             ResumeLayout(false);
@@ -107,5 +123,9 @@
         private Button btnCommencer;
         private Label lblNonUtilisateurCourant;
         private TextBox textBox1;
+        private Label label1;
+        private TextBox txtNbrQuestions;
+        private TextBox txtScore;
+        private Label label2;
     }
 }

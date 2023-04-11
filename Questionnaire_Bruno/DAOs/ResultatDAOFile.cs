@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Questionnaire_Bruno.DAOs
 {
-    internal class ResultatDAOFile
+    internal class ResultatDAOFile : IResultatDAO
     {
         private string path = @"..\..\..\FILES\resultat.txt";
 
@@ -29,7 +29,7 @@ namespace Questionnaire_Bruno.DAOs
                 Questionnaire questionnaire = new Questionnaire();
 
                 questionnaire.Id = int.Parse(components[0]);
-                questionnaire.ScorePassage = int.Parse(components[1]);
+                questionnaire.Passage = int.Parse(components[1]);
                 questionnaire.ScoreReussi = int.Parse(components[2]);
                 questionnaire.LoginUtilisateur = components[3];
 

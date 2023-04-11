@@ -30,9 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelQuestionnaire));
             btnConfirmer = new Button();
-            lblCount = new Label();
             lblEnonce = new Label();
-            pnlReponses = new Panel();
+            pnlReponseQuestion = new Panel();
             SuspendLayout();
             // 
             // btnConfirmer
@@ -47,15 +46,6 @@
             btnConfirmer.UseVisualStyleBackColor = false;
             btnConfirmer.Click += btnConfirmer_Click_1;
             // 
-            // lblCount
-            // 
-            lblCount.AutoSize = true;
-            lblCount.Location = new Point(956, 356);
-            lblCount.Name = "lblCount";
-            lblCount.Size = new Size(12, 15);
-            lblCount.TabIndex = 3;
-            lblCount.Text = "*";
-            // 
             // lblEnonce
             // 
             lblEnonce.AutoSize = true;
@@ -65,23 +55,25 @@
             lblEnonce.TabIndex = 4;
             lblEnonce.Text = "*";
             // 
-            // pnlReponses
+            // pnlReponseQuestion
             // 
-            pnlReponses.Location = new Point(12, 35);
-            pnlReponses.Name = "pnlReponses";
-            pnlReponses.Size = new Size(637, 407);
-            pnlReponses.TabIndex = 5;
+            pnlReponseQuestion.BackColor = Color.Transparent;
+            pnlReponseQuestion.Location = new Point(2, 12);
+            pnlReponseQuestion.Name = "pnlReponseQuestion";
+            pnlReponseQuestion.Size = new Size(690, 457);
+            pnlReponseQuestion.TabIndex = 5;
             // 
             // PanelQuestionnaire
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1279, 610);
-            Controls.Add(pnlReponses);
+            Controls.Add(pnlReponseQuestion);
             Controls.Add(lblEnonce);
-            Controls.Add(lblCount);
             Controls.Add(btnConfirmer);
+            DoubleBuffered = true;
             Name = "PanelQuestionnaire";
             Text = "PanelQuestionnaire";
             Load += PanelQuestionnaire_Load;
@@ -92,8 +84,7 @@
         #endregion
 
         private Button btnConfirmer;
-        private Label lblCount;
         private Label lblEnonce;
-        private Panel pnlReponses;
+        private Panel pnlReponseQuestion;
     }
 }

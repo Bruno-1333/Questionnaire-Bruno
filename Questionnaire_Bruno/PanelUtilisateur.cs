@@ -16,12 +16,12 @@ namespace Questionnaire_Bruno
     {
         private User utilisateurConnecte;
 
-        public PanelUtilisateur(User utilisateur) 
+        public PanelUtilisateur(User utilisateur)
         {
             InitializeComponent();
             utilisateurConnecte = utilisateur;
             NonUtilisateurCourant();
-           
+
 
         }
 
@@ -30,29 +30,24 @@ namespace Questionnaire_Bruno
             lblNonUtilisateurCourant.Text = utilisateurConnecte.Nom;
         }
 
-        private void btnRegle_Click(object sender, EventArgs e)
-        {
-            if (textBox1.Visible)
-            {
-                textBox1.Visible = false;
-            }
-            else
-            {
-                textBox1.Visible = true;
 
-            }
-
-        }
 
         private void btnCommencer_Click(object sender, EventArgs e)
         {
-            var nbrQuestions = 10;
-            var scorePassage = 6;
-            textBox1.Visible = false;
-            Questionnaire q = new Questionnaire(nbrQuestions,scorePassage,utilisateurConnecte );
-            new PanelQuestionnaire(q).Show();
-            
-           
+
+         
+
+            try
+            {
+                int nbrQuestions = int.Parse(txtNbrQuestions.Text);
+                int scoreDePassage = int.Parse(txtScore.Text);
+                Questionnaire questionnaire = new Questionnaire(nbrQuestions, scoreDePassage, utilisateurConnecte);
+                new PanelQuestionnaire(questionnaire).Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "Entre un nombre valide");
+            }
         }
 
     }

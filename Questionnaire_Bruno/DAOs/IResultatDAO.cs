@@ -9,6 +9,6 @@ namespace Questionnaire_Bruno.DAOs
     internal interface IResultatDAO
     {
         void Ajouter(Questionnaire questionnaire);
-        List<Questionnaire> ? ChercherTout();
+        List<Questionnaire>? ChercherTout();
     }
 }

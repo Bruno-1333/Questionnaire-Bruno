@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Questionnaire_Bruno.DAOs
 {
-    internal class QuestionDAOFile : IQuestionsDAO
+    public class QuestionDAOFile : IQuestionsDAO
     {
         private string path = @"..\..\..\FILES\Questions.txt";
 

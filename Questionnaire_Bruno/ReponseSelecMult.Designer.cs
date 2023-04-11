@@ -28,117 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtQuestion4 = new System.Windows.Forms.TextBox();
-            this.txtQuestion3 = new System.Windows.Forms.TextBox();
-            this.txtQuestion2 = new System.Windows.Forms.TextBox();
-            this.txtQuestion1 = new System.Windows.Forms.TextBox();
-            this.check4Question = new System.Windows.Forms.CheckBox();
-            this.check3Question = new System.Windows.Forms.CheckBox();
-            this.check2Question = new System.Windows.Forms.CheckBox();
-            this.check1Question = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReponseSelecMult));
+            txtQuestion4 = new TextBox();
+            txtQuestion3 = new TextBox();
+            txtQuestion2 = new TextBox();
+            txtQuestion1 = new TextBox();
+            check4Question = new CheckBox();
+            check3Question = new CheckBox();
+            check2Question = new CheckBox();
+            check1Question = new CheckBox();
+            groupBox1 = new GroupBox();
+            SuspendLayout();
             // 
             // txtQuestion4
             // 
-            this.txtQuestion4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtQuestion4.Location = new System.Drawing.Point(250, 74);
-            this.txtQuestion4.Name = "txtQuestion4";
-            this.txtQuestion4.Size = new System.Drawing.Size(168, 26);
-            this.txtQuestion4.TabIndex = 15;
+            txtQuestion4.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtQuestion4.Location = new Point(346, 336);
+            txtQuestion4.Name = "txtQuestion4";
+            txtQuestion4.ReadOnly = true;
+            txtQuestion4.Size = new Size(154, 26);
+            txtQuestion4.TabIndex = 15;
             // 
             // txtQuestion3
             // 
-            this.txtQuestion3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtQuestion3.Location = new System.Drawing.Point(250, 30);
-            this.txtQuestion3.Name = "txtQuestion3";
-            this.txtQuestion3.Size = new System.Drawing.Size(168, 26);
-            this.txtQuestion3.TabIndex = 14;
+            txtQuestion3.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtQuestion3.Location = new Point(346, 304);
+            txtQuestion3.Name = "txtQuestion3";
+            txtQuestion3.ReadOnly = true;
+            txtQuestion3.Size = new Size(154, 26);
+            txtQuestion3.TabIndex = 14;
             // 
             // txtQuestion2
             // 
-            this.txtQuestion2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtQuestion2.Location = new System.Drawing.Point(45, 74);
-            this.txtQuestion2.Name = "txtQuestion2";
-            this.txtQuestion2.Size = new System.Drawing.Size(168, 26);
-            this.txtQuestion2.TabIndex = 13;
+            txtQuestion2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtQuestion2.Location = new Point(151, 336);
+            txtQuestion2.Name = "txtQuestion2";
+            txtQuestion2.ReadOnly = true;
+            txtQuestion2.Size = new Size(149, 26);
+            txtQuestion2.TabIndex = 13;
             // 
             // txtQuestion1
             // 
-            this.txtQuestion1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtQuestion1.Location = new System.Drawing.Point(45, 30);
-            this.txtQuestion1.Name = "txtQuestion1";
-            this.txtQuestion1.Size = new System.Drawing.Size(168, 26);
-            this.txtQuestion1.TabIndex = 12;
+            txtQuestion1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtQuestion1.Location = new Point(151, 298);
+            txtQuestion1.Name = "txtQuestion1";
+            txtQuestion1.ReadOnly = true;
+            txtQuestion1.Size = new Size(149, 26);
+            txtQuestion1.TabIndex = 12;
             // 
             // check4Question
             // 
-            this.check4Question.AutoSize = true;
-            this.check4Question.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.check4Question.Location = new System.Drawing.Point(229, 80);
-            this.check4Question.Name = "check4Question";
-            this.check4Question.Size = new System.Drawing.Size(15, 14);
-            this.check4Question.TabIndex = 11;
-            this.check4Question.UseVisualStyleBackColor = true;
+            check4Question.AutoSize = true;
+            check4Question.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            check4Question.Location = new Point(325, 342);
+            check4Question.Name = "check4Question";
+            check4Question.Size = new Size(15, 14);
+            check4Question.TabIndex = 11;
+            check4Question.UseVisualStyleBackColor = true;
             // 
             // check3Question
             // 
-            this.check3Question.AutoSize = true;
-            this.check3Question.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.check3Question.Location = new System.Drawing.Point(229, 36);
-            this.check3Question.Name = "check3Question";
-            this.check3Question.Size = new System.Drawing.Size(15, 14);
-            this.check3Question.TabIndex = 10;
-            this.check3Question.UseVisualStyleBackColor = true;
+            check3Question.AutoSize = true;
+            check3Question.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            check3Question.Location = new Point(325, 310);
+            check3Question.Name = "check3Question";
+            check3Question.Size = new Size(15, 14);
+            check3Question.TabIndex = 10;
+            check3Question.UseVisualStyleBackColor = true;
             // 
             // check2Question
             // 
-            this.check2Question.AutoSize = true;
-            this.check2Question.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.check2Question.Location = new System.Drawing.Point(24, 80);
-            this.check2Question.Name = "check2Question";
-            this.check2Question.Size = new System.Drawing.Size(15, 14);
-            this.check2Question.TabIndex = 9;
-            this.check2Question.UseVisualStyleBackColor = true;
+            check2Question.AutoSize = true;
+            check2Question.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            check2Question.Location = new Point(130, 342);
+            check2Question.Name = "check2Question";
+            check2Question.Size = new Size(15, 14);
+            check2Question.TabIndex = 9;
+            check2Question.UseVisualStyleBackColor = true;
             // 
             // check1Question
             // 
-            this.check1Question.AutoSize = true;
-            this.check1Question.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.check1Question.Location = new System.Drawing.Point(24, 36);
-            this.check1Question.Name = "check1Question";
-            this.check1Question.Size = new System.Drawing.Size(15, 14);
-            this.check1Question.TabIndex = 8;
-            this.check1Question.UseVisualStyleBackColor = true;
+            check1Question.AutoSize = true;
+            check1Question.Font = new Font("Arial Rounded MT Bold", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            check1Question.Location = new Point(130, 310);
+            check1Question.Name = "check1Question";
+            check1Question.Size = new Size(15, 14);
+            check1Question.TabIndex = 8;
+            check1Question.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtQuestion1);
-            this.groupBox1.Controls.Add(this.txtQuestion4);
-            this.groupBox1.Controls.Add(this.check1Question);
-            this.groupBox1.Controls.Add(this.txtQuestion2);
-            this.groupBox1.Controls.Add(this.txtQuestion3);
-            this.groupBox1.Controls.Add(this.check4Question);
-            this.groupBox1.Controls.Add(this.check2Question);
-            this.groupBox1.Controls.Add(this.check3Question);
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(434, 112);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
+            groupBox1.BackColor = Color.Transparent;
+            groupBox1.Location = new Point(0, 0);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(434, 112);
+            groupBox1.TabIndex = 16;
+            groupBox1.TabStop = false;
             // 
             // ReponseSelecMult
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox1);
-            this.Name = "ReponseSelecMult";
-            this.Size = new System.Drawing.Size(449, 122);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            Controls.Add(check1Question);
+            Controls.Add(txtQuestion1);
+            Controls.Add(groupBox1);
+            Controls.Add(txtQuestion4);
+            Controls.Add(check2Question);
+            Controls.Add(txtQuestion2);
+            Controls.Add(txtQuestion3);
+            Controls.Add(check4Question);
+            Controls.Add(check3Question);
+            DoubleBuffered = true;
+            Name = "ReponseSelecMult";
+            Size = new Size(577, 377);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

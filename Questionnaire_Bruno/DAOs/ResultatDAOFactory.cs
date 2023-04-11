@@ -8,11 +8,11 @@ namespace Questionnaire_Bruno.DAOs
 {
     internal class ResultatDAOFactory
     {
-        //public static IResultatDAO CreerResultatDAO(string type)
-        //{
-        //    if(type == "FILES") return new ResultatDAOFile();
-        //    else return new ResultatDAOBD();
+        public static IResultatDAO CreerResultatDAO(string type)
+        {
+            if (type == "FILE") return new ResultatDAOFile();
+            else return new ResultatDAOBD();
 
-        //}
+        }
     }
 }

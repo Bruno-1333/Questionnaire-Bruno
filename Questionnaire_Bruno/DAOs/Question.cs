@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Questionnaire_Bruno.DAOs
 {
-    internal class Question 
+    public class Question 
     {
         static int ctp = 0;
         public int Id { get; internal set; }
