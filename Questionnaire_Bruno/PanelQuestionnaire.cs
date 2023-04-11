@@ -32,6 +32,7 @@ namespace Questionnaire_Bruno
             {
                 Question currentQuestion = QuestionnaireCourrent.Questions[questionIndexActual];
                 lblEnonce.Text = currentQuestion.Enonce;
+
             }
             else
             {
@@ -47,7 +48,9 @@ namespace Questionnaire_Bruno
                 pnlReponseQuestion.Controls.Clear();
                 pnlReponseQuestion.Controls.Add(new ReponseSelecMult());
 
+
                 ReponseSelecMult reponseSelecMult = (ReponseSelecMult)pnlReponseQuestion.Controls[0];
+
                 reponseSelecMult.ReponseSelecMult1 = QuestionnaireCourrent.Questions[questionIndexActual].ChoixSelcMult[0];
                 reponseSelecMult.ReponseSelecMult2 = QuestionnaireCourrent.Questions[questionIndexActual].ChoixSelcMult[1];
                 reponseSelecMult.ReponseSelecMult3 = QuestionnaireCourrent.Questions[questionIndexActual].ChoixSelcMult[2];
@@ -100,8 +103,10 @@ namespace Questionnaire_Bruno
             }
             else
             {
-                string notePassage = "Bravo ok";
-                if (QuestionnaireCourrent.ScoreReussi >= QuestionnaireCourrent.Passage) notePassage = "Obtenu la note de passege";
+                string notePassage = "PAS BONNE";
+                picturePasGagne.Visible = true;
+                if (QuestionnaireCourrent.ScoreReussi >= QuestionnaireCourrent.Passage) notePassage = "BRAVO";
+                pictureGagne.Visible = true;
                 MessageBox.Show($"Terminé le questionnaire, votre score: {QuestionnaireCourrent.ScoreReussi}/{QuestionnaireCourrent.Questions.Count}\n{notePassage}");
 
                 questionIndexActual = 0;
@@ -115,6 +120,7 @@ namespace Questionnaire_Bruno
             }
 
         }
+
 
     }
 }

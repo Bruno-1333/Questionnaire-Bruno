@@ -28,57 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioBtnReponseFaux = new System.Windows.Forms.RadioButton();
-            this.radioBtnReponseVrai = new System.Windows.Forms.RadioButton();
-            this.groupBox3.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReponseVraiFaux));
+            groupBox3 = new GroupBox();
+            radioBtnReponseFaux = new RadioButton();
+            radioBtnReponseVrai = new RadioButton();
+            SuspendLayout();
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioBtnReponseFaux);
-            this.groupBox3.Controls.Add(this.radioBtnReponseVrai);
-            this.groupBox3.Location = new System.Drawing.Point(3, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(221, 64);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
+            groupBox3.BackColor = Color.Transparent;
+            groupBox3.Location = new Point(-9, -8);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(588, 390);
+            groupBox3.TabIndex = 6;
+            groupBox3.TabStop = false;
             // 
             // radioBtnReponseFaux
             // 
-            this.radioBtnReponseFaux.AutoSize = true;
-            this.radioBtnReponseFaux.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioBtnReponseFaux.Location = new System.Drawing.Point(119, 27);
-            this.radioBtnReponseFaux.Name = "radioBtnReponseFaux";
-            this.radioBtnReponseFaux.Size = new System.Drawing.Size(69, 26);
-            this.radioBtnReponseFaux.TabIndex = 1;
-            this.radioBtnReponseFaux.TabStop = true;
-            this.radioBtnReponseFaux.Text = "Faux";
-            this.radioBtnReponseFaux.UseVisualStyleBackColor = true;
+            radioBtnReponseFaux.AutoSize = true;
+            radioBtnReponseFaux.BackColor = Color.Transparent;
+            radioBtnReponseFaux.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            radioBtnReponseFaux.ForeColor = Color.Red;
+            radioBtnReponseFaux.Location = new Point(373, 344);
+            radioBtnReponseFaux.Name = "radioBtnReponseFaux";
+            radioBtnReponseFaux.Size = new Size(69, 26);
+            radioBtnReponseFaux.TabIndex = 1;
+            radioBtnReponseFaux.TabStop = true;
+            radioBtnReponseFaux.Text = "Faux";
+            radioBtnReponseFaux.UseVisualStyleBackColor = false;
             // 
             // radioBtnReponseVrai
             // 
-            this.radioBtnReponseVrai.AutoSize = true;
-            this.radioBtnReponseVrai.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioBtnReponseVrai.Location = new System.Drawing.Point(15, 27);
-            this.radioBtnReponseVrai.Name = "radioBtnReponseVrai";
-            this.radioBtnReponseVrai.Size = new System.Drawing.Size(60, 26);
-            this.radioBtnReponseVrai.TabIndex = 0;
-            this.radioBtnReponseVrai.TabStop = true;
-            this.radioBtnReponseVrai.Text = "Vrai";
-            this.radioBtnReponseVrai.UseVisualStyleBackColor = true;
+            radioBtnReponseVrai.AutoSize = true;
+            radioBtnReponseVrai.BackColor = Color.Transparent;
+            radioBtnReponseVrai.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            radioBtnReponseVrai.ForeColor = Color.Red;
+            radioBtnReponseVrai.Location = new Point(171, 344);
+            radioBtnReponseVrai.Name = "radioBtnReponseVrai";
+            radioBtnReponseVrai.Size = new Size(60, 26);
+            radioBtnReponseVrai.TabIndex = 0;
+            radioBtnReponseVrai.TabStop = true;
+            radioBtnReponseVrai.Text = "Vrai";
+            radioBtnReponseVrai.UseVisualStyleBackColor = false;
             // 
             // ReponseVraiFaux
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox3);
-            this.Name = "ReponseVraiFaux";
-            this.Size = new System.Drawing.Size(240, 80);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            Controls.Add(radioBtnReponseFaux);
+            Controls.Add(radioBtnReponseVrai);
+            Controls.Add(groupBox3);
+            DoubleBuffered = true;
+            Name = "ReponseVraiFaux";
+            Size = new Size(567, 373);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

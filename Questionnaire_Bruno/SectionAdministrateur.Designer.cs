@@ -135,8 +135,9 @@
             // MenuAdmAfficherResultat
             // 
             MenuAdmAfficherResultat.Name = "MenuAdmAfficherResultat";
-            MenuAdmAfficherResultat.Size = new Size(116, 22);
+            MenuAdmAfficherResultat.Size = new Size(180, 22);
             MenuAdmAfficherResultat.Text = "Afficher";
+            MenuAdmAfficherResultat.Click += MenuAdmAfficherResultat_Click;
             // 
             // PannelPrincipale
             // 

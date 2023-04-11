@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Questionnaire_Bruno.DAOs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,6 +64,16 @@ namespace Questionnaire_Bruno
         {
             PannelPrincipale.Controls.Clear();
             PannelPrincipale.Controls.Add(new ConsulterQuestions());
+        }
+
+        private void MenuAdmAfficherResultat_Click(object sender, EventArgs e)
+        {
+            PannelPrincipale.Controls.Clear();
+            Resultat resultat = new Resultat();
+            PannelPrincipale.Controls.Add(resultat);
+
+            List<Questionnaire> questionnaires =  ResultatDAOFactory.CreerResultatDAO("FILE").ChercherTout();
+            resultat.ResultatQuestionnaire(questionnaires);
         }
     }
 }

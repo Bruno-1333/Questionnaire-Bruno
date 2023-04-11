@@ -55,7 +55,7 @@
             lblNonUtilisateurCourant.BackColor = Color.Transparent;
             lblNonUtilisateurCourant.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point);
             lblNonUtilisateurCourant.ForeColor = Color.Gold;
-            lblNonUtilisateurCourant.Location = new Point(945, 83);
+            lblNonUtilisateurCourant.Location = new Point(1026, 92);
             lblNonUtilisateurCourant.Name = "lblNonUtilisateurCourant";
             lblNonUtilisateurCourant.Size = new Size(31, 37);
             lblNonUtilisateurCourant.TabIndex = 6;

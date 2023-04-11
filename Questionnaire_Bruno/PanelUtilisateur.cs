@@ -35,7 +35,7 @@ namespace Questionnaire_Bruno
         private void btnCommencer_Click(object sender, EventArgs e)
         {
 
-         
+
 
             try
             {
