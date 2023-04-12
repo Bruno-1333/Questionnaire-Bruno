@@ -104,10 +104,10 @@ namespace Questionnaire_Bruno
             else
             {
                 string notePassage = "PAS BONNE";
-                picturePasGagne.Visible = true;
+
                 if (QuestionnaireCourrent.ScoreReussi >= QuestionnaireCourrent.Passage) notePassage = "BRAVO";
-                pictureGagne.Visible = true;
-                MessageBox.Show($"Terminé le questionnaire, votre score: {QuestionnaireCourrent.ScoreReussi}/{QuestionnaireCourrent.Questions.Count}\n{notePassage}");
+
+                MessageBox.Show($" GAME SHOW Terminé !! score: {QuestionnaireCourrent.ScoreReussi}/{QuestionnaireCourrent.Questions.Count}\n{notePassage}");
 
                 questionIndexActual = 0;
 

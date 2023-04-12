@@ -35,6 +35,7 @@
             txtNbrQuestions = new TextBox();
             txtScore = new TextBox();
             label2 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // btnCommencer
@@ -53,11 +54,11 @@
             // 
             lblNonUtilisateurCourant.AutoSize = true;
             lblNonUtilisateurCourant.BackColor = Color.Transparent;
-            lblNonUtilisateurCourant.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNonUtilisateurCourant.Font = new Font("Arial Rounded MT Bold", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblNonUtilisateurCourant.ForeColor = Color.Gold;
             lblNonUtilisateurCourant.Location = new Point(1026, 92);
             lblNonUtilisateurCourant.Name = "lblNonUtilisateurCourant";
-            lblNonUtilisateurCourant.Size = new Size(31, 37);
+            lblNonUtilisateurCourant.Size = new Size(35, 43);
             lblNonUtilisateurCourant.TabIndex = 6;
             lblNonUtilisateurCourant.Text = "*";
             lblNonUtilisateurCourant.TextAlign = ContentAlignment.MiddleCenter;
@@ -67,7 +68,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(23, 204);
+            label1.Location = new Point(23, 304);
             label1.Name = "label1";
             label1.Size = new Size(346, 27);
             label1.TabIndex = 7;
@@ -75,16 +76,16 @@
             // 
             // txtNbrQuestions
             // 
-            txtNbrQuestions.Location = new Point(375, 210);
+            txtNbrQuestions.Location = new Point(375, 308);
             txtNbrQuestions.Name = "txtNbrQuestions";
-            txtNbrQuestions.Size = new Size(100, 23);
+            txtNbrQuestions.Size = new Size(35, 23);
             txtNbrQuestions.TabIndex = 8;
             // 
             // txtScore
             // 
-            txtScore.Location = new Point(348, 300);
+            txtScore.Location = new Point(348, 374);
             txtScore.Name = "txtScore";
-            txtScore.Size = new Size(100, 23);
+            txtScore.Size = new Size(35, 23);
             txtScore.TabIndex = 10;
             // 
             // label2
@@ -92,11 +93,23 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(23, 294);
+            label2.Location = new Point(23, 368);
             label2.Name = "label2";
             label2.Size = new Size(309, 27);
             label2.TabIndex = 9;
             label2.Text = "Choisir le score de passage";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Arial Black", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label3.ForeColor = Color.Gold;
+            label3.Location = new Point(102, 146);
+            label3.Name = "label3";
+            label3.Size = new Size(308, 104);
+            label3.TabIndex = 11;
+            label3.Text = "Bienvenue au \r\nGame Show";
             // 
             // PanelUtilisateur
             // 
@@ -105,6 +118,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1279, 612);
+            Controls.Add(label3);
             Controls.Add(txtScore);
             Controls.Add(label2);
             Controls.Add(txtNbrQuestions);
@@ -127,5 +141,6 @@
         private TextBox txtNbrQuestions;
         private TextBox txtScore;
         private Label label2;
+        private Label label3;
     }
 }
